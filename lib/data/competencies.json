@@ -1,0 +1,52 @@
+[
+  {
+    "code": "C01",
+    "name": "Analytical Thinking",
+    "definition": "Demonstrates analytical thinking in work contexts."
+  },
+  {
+    "code": "C02",
+    "name": "Communication",
+    "definition": "Demonstrates communication in work contexts."
+  },
+  {
+    "code": "C03",
+    "name": "Collaboration",
+    "definition": "Demonstrates collaboration in work contexts."
+  },
+  {
+    "code": "C04",
+    "name": "Customer Focus",
+    "definition": "Demonstrates customer focus in work contexts."
+  },
+  {
+    "code": "C05",
+    "name": "Execution",
+    "definition": "Demonstrates execution in work contexts."
+  },
+  {
+    "code": "C06",
+    "name": "Innovation",
+    "definition": "Demonstrates innovation in work contexts."
+  },
+  {
+    "code": "C07",
+    "name": "Leadership",
+    "definition": "Demonstrates leadership in work contexts."
+  },
+  {
+    "code": "C08",
+    "name": "Technical Proficiency",
+    "definition": "Demonstrates technical proficiency in work contexts."
+  },
+  {
+    "code": "C09",
+    "name": "Risk & Compliance",
+    "definition": "Demonstrates risk & compliance in work contexts."
+  },
+  {
+    "code": "C10",
+    "name": "Commercial Acumen",
+    "definition": "Demonstrates commercial acumen in work contexts."
+  }
+]

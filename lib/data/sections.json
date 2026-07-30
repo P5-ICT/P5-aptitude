@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "consent-profile",
+    "title": "Consent & Profile",
+    "order": 1
+  },
+  {
+    "slug": "exposure",
+    "title": "Experience & Exposure",
+    "order": 2
+  },
+  {
+    "slug": "objective-1",
+    "title": "Knowledge Check I",
+    "order": 3
+  },
+  {
+    "slug": "objective-2",
+    "title": "Knowledge Check II",
+    "order": 4
+  },
+  {
+    "slug": "judgement-1",
+    "title": "Situational Judgement I",
+    "order": 5
+  },
+  {
+    "slug": "judgement-2",
+    "title": "Situational Judgement II",
+    "order": 6
+  },
+  {
+    "slug": "judgement-3",
+    "title": "Situational Judgement III",
+    "order": 7
+  },
+  {
+    "slug": "self-report",
+    "title": "Work Style",
+    "order": 8
+  },
+  {
+    "slug": "interest",
+    "title": "Career Interests",
+    "order": 9
+  }
+]

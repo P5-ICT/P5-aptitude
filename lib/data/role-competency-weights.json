@@ -1,0 +1,602 @@
+[
+  {
+    "roleCode": "AO",
+    "competencyCode": "C01",
+    "weight": 0.07
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C02",
+    "weight": 0.088
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C03",
+    "weight": 0.105
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C04",
+    "weight": 0.123
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C05",
+    "weight": 0.14
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C06",
+    "weight": 0.158
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C07",
+    "weight": 0.053
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C08",
+    "weight": 0.07
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C09",
+    "weight": 0.088
+  },
+  {
+    "roleCode": "AO",
+    "competencyCode": "C10",
+    "weight": 0.105
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C01",
+    "weight": 0.079
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C02",
+    "weight": 0.111
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C03",
+    "weight": 0.143
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C04",
+    "weight": 0.063
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C05",
+    "weight": 0.095
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C06",
+    "weight": 0.127
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C07",
+    "weight": 0.048
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C08",
+    "weight": 0.079
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C09",
+    "weight": 0.111
+  },
+  {
+    "roleCode": "FA",
+    "competencyCode": "C10",
+    "weight": 0.143
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C01",
+    "weight": 0.097
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C02",
+    "weight": 0.145
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C03",
+    "weight": 0.081
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C04",
+    "weight": 0.129
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C05",
+    "weight": 0.065
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C06",
+    "weight": 0.113
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C07",
+    "weight": 0.048
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C08",
+    "weight": 0.097
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C09",
+    "weight": 0.145
+  },
+  {
+    "roleCode": "DA",
+    "competencyCode": "C10",
+    "weight": 0.081
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C01",
+    "weight": 0.115
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C02",
+    "weight": 0.066
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C03",
+    "weight": 0.131
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C04",
+    "weight": 0.082
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C05",
+    "weight": 0.148
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C06",
+    "weight": 0.098
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C07",
+    "weight": 0.049
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C08",
+    "weight": 0.115
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C09",
+    "weight": 0.066
+  },
+  {
+    "roleCode": "IT",
+    "competencyCode": "C10",
+    "weight": 0.131
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C01",
+    "weight": 0.133
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C02",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C03",
+    "weight": 0.067
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C04",
+    "weight": 0.15
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C05",
+    "weight": 0.117
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C06",
+    "weight": 0.083
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C07",
+    "weight": 0.05
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C08",
+    "weight": 0.133
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C09",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "MC",
+    "competencyCode": "C10",
+    "weight": 0.067
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C01",
+    "weight": 0.136
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C02",
+    "weight": 0.121
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C03",
+    "weight": 0.106
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C04",
+    "weight": 0.091
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C05",
+    "weight": 0.076
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C06",
+    "weight": 0.061
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C07",
+    "weight": 0.045
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C08",
+    "weight": 0.136
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C09",
+    "weight": 0.121
+  },
+  {
+    "roleCode": "SC",
+    "competencyCode": "C10",
+    "weight": 0.106
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C01",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C02",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C03",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C04",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C05",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C06",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C07",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C08",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C09",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PC",
+    "competencyCode": "C10",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C01",
+    "weight": 0.07
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C02",
+    "weight": 0.088
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C03",
+    "weight": 0.105
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C04",
+    "weight": 0.123
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C05",
+    "weight": 0.14
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C06",
+    "weight": 0.158
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C07",
+    "weight": 0.053
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C08",
+    "weight": 0.07
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C09",
+    "weight": 0.088
+  },
+  {
+    "roleCode": "HR",
+    "competencyCode": "C10",
+    "weight": 0.105
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C01",
+    "weight": 0.079
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C02",
+    "weight": 0.111
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C03",
+    "weight": 0.143
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C04",
+    "weight": 0.063
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C05",
+    "weight": 0.095
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C06",
+    "weight": 0.127
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C07",
+    "weight": 0.048
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C08",
+    "weight": 0.079
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C09",
+    "weight": 0.111
+  },
+  {
+    "roleCode": "BD",
+    "competencyCode": "C10",
+    "weight": 0.143
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C01",
+    "weight": 0.097
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C02",
+    "weight": 0.145
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C03",
+    "weight": 0.081
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C04",
+    "weight": 0.129
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C05",
+    "weight": 0.065
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C06",
+    "weight": 0.113
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C07",
+    "weight": 0.048
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C08",
+    "weight": 0.097
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C09",
+    "weight": 0.145
+  },
+  {
+    "roleCode": "EN",
+    "competencyCode": "C10",
+    "weight": 0.081
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C01",
+    "weight": 0.115
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C02",
+    "weight": 0.066
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C03",
+    "weight": 0.131
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C04",
+    "weight": 0.082
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C05",
+    "weight": 0.148
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C06",
+    "weight": 0.098
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C07",
+    "weight": 0.049
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C08",
+    "weight": 0.115
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C09",
+    "weight": 0.066
+  },
+  {
+    "roleCode": "LS",
+    "competencyCode": "C10",
+    "weight": 0.131
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C01",
+    "weight": 0.133
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C02",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C03",
+    "weight": 0.067
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C04",
+    "weight": 0.15
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C05",
+    "weight": 0.117
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C06",
+    "weight": 0.083
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C07",
+    "weight": 0.05
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C08",
+    "weight": 0.133
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C09",
+    "weight": 0.1
+  },
+  {
+    "roleCode": "PT",
+    "competencyCode": "C10",
+    "weight": 0.067
+  }
+]

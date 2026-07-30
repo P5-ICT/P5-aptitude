@@ -1,0 +1,86 @@
+[
+  {
+    "roleCode": "AO",
+    "name": "Administration & Operations",
+    "description": "Pathway for Administration & Operations roles at Pillar 5.",
+    "exampleRoles": "Administration & Operations Specialist, Administration & Operations Lead",
+    "outputTemplate": "Consider a development conversation focused on Administration & Operations competencies."
+  },
+  {
+    "roleCode": "FA",
+    "name": "Finance & Accounting",
+    "description": "Pathway for Finance & Accounting roles at Pillar 5.",
+    "exampleRoles": "Finance & Accounting Specialist, Finance & Accounting Lead",
+    "outputTemplate": "Consider a development conversation focused on Finance & Accounting competencies."
+  },
+  {
+    "roleCode": "DA",
+    "name": "Data & Analytics",
+    "description": "Pathway for Data & Analytics roles at Pillar 5.",
+    "exampleRoles": "Data & Analytics Specialist, Data & Analytics Lead",
+    "outputTemplate": "Consider a development conversation focused on Data & Analytics competencies."
+  },
+  {
+    "roleCode": "IT",
+    "name": "Information Technology",
+    "description": "Pathway for Information Technology roles at Pillar 5.",
+    "exampleRoles": "Information Technology Specialist, Information Technology Lead",
+    "outputTemplate": "Consider a development conversation focused on Information Technology competencies."
+  },
+  {
+    "roleCode": "MC",
+    "name": "Marketing & Communications",
+    "description": "Pathway for Marketing & Communications roles at Pillar 5.",
+    "exampleRoles": "Marketing & Communications Specialist, Marketing & Communications Lead",
+    "outputTemplate": "Consider a development conversation focused on Marketing & Communications competencies."
+  },
+  {
+    "roleCode": "SC",
+    "name": "Supply Chain & Logistics",
+    "description": "Pathway for Supply Chain & Logistics roles at Pillar 5.",
+    "exampleRoles": "Supply Chain & Logistics Specialist, Supply Chain & Logistics Lead",
+    "outputTemplate": "Consider a development conversation focused on Supply Chain & Logistics competencies."
+  },
+  {
+    "roleCode": "PC",
+    "name": "Project Coordination",
+    "description": "Pathway for Project Coordination roles at Pillar 5.",
+    "exampleRoles": "Project Coordination Specialist, Project Coordination Lead",
+    "outputTemplate": "Consider a development conversation focused on Project Coordination competencies."
+  },
+  {
+    "roleCode": "HR",
+    "name": "Human Resources",
+    "description": "Pathway for Human Resources roles at Pillar 5.",
+    "exampleRoles": "Human Resources Specialist, Human Resources Lead",
+    "outputTemplate": "Consider a development conversation focused on Human Resources competencies."
+  },
+  {
+    "roleCode": "BD",
+    "name": "Business Development",
+    "description": "Pathway for Business Development roles at Pillar 5.",
+    "exampleRoles": "Business Development Specialist, Business Development Lead",
+    "outputTemplate": "Consider a development conversation focused on Business Development competencies."
+  },
+  {
+    "roleCode": "EN",
+    "name": "Engineering",
+    "description": "Pathway for Engineering roles at Pillar 5.",
+    "exampleRoles": "Engineering Specialist, Engineering Lead",
+    "outputTemplate": "Consider a development conversation focused on Engineering competencies."
+  },
+  {
+    "roleCode": "LS",
+    "name": "Legal & Compliance",
+    "description": "Pathway for Legal & Compliance roles at Pillar 5.",
+    "exampleRoles": "Legal & Compliance Specialist, Legal & Compliance Lead",
+    "outputTemplate": "Consider a development conversation focused on Legal & Compliance competencies."
+  },
+  {
+    "roleCode": "PT",
+    "name": "People & Talent",
+    "description": "Pathway for People & Talent roles at Pillar 5.",
+    "exampleRoles": "People & Talent Specialist, People & Talent Lead",
+    "outputTemplate": "Consider a development conversation focused on People & Talent competencies."
+  }
+]

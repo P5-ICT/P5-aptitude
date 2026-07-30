@@ -1,0 +1,2788 @@
+[
+  {
+    "questionId": "P001",
+    "order": 1,
+    "section": "Consent & Profile",
+    "sectionSlug": "consent-profile",
+    "text": "Do you consent to participate in this aptitude assessment?",
+    "responseType": "single",
+    "scoringType": "Consent",
+    "required": true,
+    "options": [
+      {
+        "key": "yes",
+        "label": "Yes, I consent",
+        "scoreValue": 0
+      },
+      {
+        "key": "no",
+        "label": "No, I do not consent",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "P002",
+    "order": 2,
+    "section": "Consent & Profile",
+    "sectionSlug": "consent-profile",
+    "text": "How many years have you worked in your current field?",
+    "responseType": "single",
+    "scoringType": "Context",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "0-2",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "3-5",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "6-10",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "10+",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "P003",
+    "order": 3,
+    "section": "Experience & Exposure",
+    "sectionSlug": "exposure",
+    "text": "Depth of experience in operations roles?",
+    "responseType": "single",
+    "scoringType": "Exposure",
+    "required": true,
+    "options": [
+      {
+        "key": "none",
+        "label": "none",
+        "scoreValue": 0
+      },
+      {
+        "key": "basic",
+        "label": "basic",
+        "scoreValue": 0
+      },
+      {
+        "key": "moderate",
+        "label": "moderate",
+        "scoreValue": 0
+      },
+      {
+        "key": "advanced",
+        "label": "advanced",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "P004",
+    "order": 4,
+    "section": "Experience & Exposure",
+    "sectionSlug": "exposure",
+    "text": "Years of cross-functional project exposure?",
+    "responseType": "single",
+    "scoringType": "Exposure",
+    "required": true,
+    "options": [
+      {
+        "key": "0",
+        "label": "0",
+        "scoreValue": 0
+      },
+      {
+        "key": "1-2",
+        "label": "1-2",
+        "scoreValue": 0
+      },
+      {
+        "key": "3-5",
+        "label": "3-5",
+        "scoreValue": 0
+      },
+      {
+        "key": "6+",
+        "label": "6+",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "P005",
+    "order": 5,
+    "section": "Experience & Exposure",
+    "sectionSlug": "exposure",
+    "text": "Depth of experience in technical roles?",
+    "responseType": "single",
+    "scoringType": "Exposure",
+    "required": true,
+    "options": [
+      {
+        "key": "none",
+        "label": "none",
+        "scoreValue": 0
+      },
+      {
+        "key": "basic",
+        "label": "basic",
+        "scoreValue": 0
+      },
+      {
+        "key": "moderate",
+        "label": "moderate",
+        "scoreValue": 0
+      },
+      {
+        "key": "advanced",
+        "label": "advanced",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "P006",
+    "order": 6,
+    "section": "Experience & Exposure",
+    "sectionSlug": "exposure",
+    "text": "Years of client-facing experience?",
+    "responseType": "single",
+    "scoringType": "Exposure",
+    "required": true,
+    "options": [
+      {
+        "key": "0",
+        "label": "0",
+        "scoreValue": 0
+      },
+      {
+        "key": "1-2",
+        "label": "1-2",
+        "scoreValue": 0
+      },
+      {
+        "key": "3-5",
+        "label": "3-5",
+        "scoreValue": 0
+      },
+      {
+        "key": "6+",
+        "label": "6+",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O001",
+    "order": 7,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 1: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C01",
+    "secondaryCompetency": "C04",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J001",
+    "order": 8,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 1: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C01",
+    "secondaryCompetency": "C06",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S001",
+    "order": 9,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 1: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I001",
+    "order": 10,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 1: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O002",
+    "order": 11,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 2: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C02",
+    "secondaryCompetency": "C05",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J002",
+    "order": 12,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 2: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C02",
+    "secondaryCompetency": "C07",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S002",
+    "order": 13,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 2: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I002",
+    "order": 14,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 2: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O003",
+    "order": 15,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 3: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C03",
+    "secondaryCompetency": "C06",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J003",
+    "order": 16,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 3: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C03",
+    "secondaryCompetency": "C08",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S003",
+    "order": 17,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 3: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I003",
+    "order": 18,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 3: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O004",
+    "order": 19,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 4: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C04",
+    "secondaryCompetency": "C07",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J004",
+    "order": 20,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 4: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C04",
+    "secondaryCompetency": "C09",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S004",
+    "order": 21,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 4: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I004",
+    "order": 22,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 4: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O005",
+    "order": 23,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 5: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C05",
+    "secondaryCompetency": "C08",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J005",
+    "order": 24,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 5: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C05",
+    "secondaryCompetency": "C10",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S005",
+    "order": 25,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 5: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I005",
+    "order": 26,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 5: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O006",
+    "order": 27,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 6: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C06",
+    "secondaryCompetency": "C09",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J006",
+    "order": 28,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 6: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C06",
+    "secondaryCompetency": "C01",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S006",
+    "order": 29,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 6: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I006",
+    "order": 30,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 6: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O007",
+    "order": 31,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 7: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C07",
+    "secondaryCompetency": "C10",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J007",
+    "order": 32,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 7: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C07",
+    "secondaryCompetency": "C02",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S007",
+    "order": 33,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 7: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I007",
+    "order": 34,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 7: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O008",
+    "order": 35,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 8: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C08",
+    "secondaryCompetency": "C01",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J008",
+    "order": 36,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 8: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C08",
+    "secondaryCompetency": "C03",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S008",
+    "order": 37,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 8: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I008",
+    "order": 38,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 8: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O009",
+    "order": 39,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 9: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C09",
+    "secondaryCompetency": "C02",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J009",
+    "order": 40,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 9: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C09",
+    "secondaryCompetency": "C04",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S009",
+    "order": 41,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 9: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I009",
+    "order": 42,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 9: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O010",
+    "order": 43,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 10: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C10",
+    "secondaryCompetency": "C03",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J010",
+    "order": 44,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 10: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C10",
+    "secondaryCompetency": "C05",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S010",
+    "order": 45,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 10: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I010",
+    "order": 46,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 10: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O011",
+    "order": 47,
+    "section": "Knowledge Check I",
+    "sectionSlug": "objective-1",
+    "text": "Objective question 11: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C01",
+    "secondaryCompetency": "C04",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J011",
+    "order": 48,
+    "section": "Situational Judgement I",
+    "sectionSlug": "judgement-1",
+    "text": "Judgement scenario 11: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C01",
+    "secondaryCompetency": "C06",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S011",
+    "order": 49,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 11: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I011",
+    "order": 50,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 11: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O012",
+    "order": 51,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 12: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C02",
+    "secondaryCompetency": "C05",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J012",
+    "order": 52,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 12: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C02",
+    "secondaryCompetency": "C07",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "S012",
+    "order": 53,
+    "section": "Work Style",
+    "sectionSlug": "self-report",
+    "text": "Self-report 12: How do you prefer to work?",
+    "responseType": "single",
+    "scoringType": "Self-report",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Style A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Style B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Style C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Style D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "I012",
+    "order": 54,
+    "section": "Career Interests",
+    "sectionSlug": "interest",
+    "text": "Interest 12: Which activities appeal to you most?",
+    "responseType": "single",
+    "scoringType": "Interest",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Activity A",
+        "scoreValue": 0
+      },
+      {
+        "key": "B",
+        "label": "Activity B",
+        "scoreValue": 0
+      },
+      {
+        "key": "C",
+        "label": "Activity C",
+        "scoreValue": 0
+      },
+      {
+        "key": "D",
+        "label": "Activity D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O013",
+    "order": 55,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 13: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C03",
+    "secondaryCompetency": "C06",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J013",
+    "order": 56,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 13: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C03",
+    "secondaryCompetency": "C08",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O014",
+    "order": 57,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 14: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C04",
+    "secondaryCompetency": "C07",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J014",
+    "order": 58,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 14: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C04",
+    "secondaryCompetency": "C09",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O015",
+    "order": 59,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 15: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C05",
+    "secondaryCompetency": "C08",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J015",
+    "order": 60,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 15: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C05",
+    "secondaryCompetency": "C10",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O016",
+    "order": 61,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 16: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C06",
+    "secondaryCompetency": "C09",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J016",
+    "order": 62,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 16: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C06",
+    "secondaryCompetency": "C01",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O017",
+    "order": 63,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 17: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C07",
+    "secondaryCompetency": "C10",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J017",
+    "order": 64,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 17: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C07",
+    "secondaryCompetency": "C02",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O018",
+    "order": 65,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 18: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C08",
+    "secondaryCompetency": "C01",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J018",
+    "order": 66,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 18: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C08",
+    "secondaryCompetency": "C03",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O019",
+    "order": 67,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 19: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C09",
+    "secondaryCompetency": "C02",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J019",
+    "order": 68,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 19: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C09",
+    "secondaryCompetency": "C04",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O020",
+    "order": 69,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 20: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C10",
+    "secondaryCompetency": "C03",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J020",
+    "order": 70,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 20: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C10",
+    "secondaryCompetency": "C05",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O021",
+    "order": 71,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 21: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C01",
+    "secondaryCompetency": "C04",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J021",
+    "order": 72,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 21: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C01",
+    "secondaryCompetency": "C06",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "O022",
+    "order": 73,
+    "section": "Knowledge Check II",
+    "sectionSlug": "objective-2",
+    "text": "Objective question 22: Select the best response.",
+    "responseType": "single",
+    "scoringType": "Objective",
+    "primaryCompetency": "C02",
+    "secondaryCompetency": "C05",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Option A",
+        "scoreValue": 4
+      },
+      {
+        "key": "B",
+        "label": "Option B",
+        "scoreValue": 3
+      },
+      {
+        "key": "C",
+        "label": "Option C",
+        "scoreValue": 2
+      },
+      {
+        "key": "D",
+        "label": "Option D",
+        "scoreValue": 1
+      }
+    ]
+  },
+  {
+    "questionId": "J022",
+    "order": 74,
+    "section": "Situational Judgement II",
+    "sectionSlug": "judgement-2",
+    "text": "Judgement scenario 22: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C02",
+    "secondaryCompetency": "C07",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J023",
+    "order": 75,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 23: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C03",
+    "secondaryCompetency": "C08",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J024",
+    "order": 76,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 24: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C04",
+    "secondaryCompetency": "C09",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J025",
+    "order": 77,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 25: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C05",
+    "secondaryCompetency": "C10",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J026",
+    "order": 78,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 26: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C06",
+    "secondaryCompetency": "C01",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J027",
+    "order": 79,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 27: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C07",
+    "secondaryCompetency": "C02",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J028",
+    "order": 80,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 28: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C08",
+    "secondaryCompetency": "C03",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J029",
+    "order": 81,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 29: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C09",
+    "secondaryCompetency": "C04",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J030",
+    "order": 82,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 30: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C10",
+    "secondaryCompetency": "C05",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J031",
+    "order": 83,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 31: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C01",
+    "secondaryCompetency": "C06",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  },
+  {
+    "questionId": "J032",
+    "order": 84,
+    "section": "Situational Judgement III",
+    "sectionSlug": "judgement-3",
+    "text": "Judgement scenario 32: What would you do?",
+    "responseType": "single",
+    "scoringType": "Judgement",
+    "primaryCompetency": "C02",
+    "secondaryCompetency": "C07",
+    "required": true,
+    "options": [
+      {
+        "key": "A",
+        "label": "Response A",
+        "scoreValue": 3
+      },
+      {
+        "key": "B",
+        "label": "Response B",
+        "scoreValue": 2
+      },
+      {
+        "key": "C",
+        "label": "Response C",
+        "scoreValue": 1
+      },
+      {
+        "key": "D",
+        "label": "Response D",
+        "scoreValue": 0
+      }
+    ]
+  }
+]

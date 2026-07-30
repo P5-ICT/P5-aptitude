@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --p5-navy: #0b1f3a;
+  --p5-teal: #1a8f8f;
+  --p5-gold: #c9a227;
+  --p5-sand: #f4efe6;
+  --p5-ink: #1a1a1a;
+}
+
+@theme inline {
+  --color-p5-navy: var(--p5-navy);
+  --color-p5-teal: var(--p5-teal);
+  --color-p5-gold: var(--p5-gold);
+  --color-p5-sand: var(--p5-sand);
+  --color-p5-ink: var(--p5-ink);
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-body: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--p5-ink);
+  background: var(--p5-sand);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
