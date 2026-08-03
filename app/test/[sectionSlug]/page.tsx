@@ -2,7 +2,10 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { SiteHeader } from "@/components/site-header";
+import { ParticipantShell } from "@/components/features/assessment/participant-shell";
+import { Button } from "@/components/ui/button";
+import { OptionChoice } from "@/components/ui/option-choice";
+import { Progress } from "@/components/ui/progress";
 import { getCatalog } from "@/lib/catalog";
 import { loadSession, saveSession } from "@/lib/session";
 
@@ -84,77 +87,81 @@ export default function TestSectionPage() {
   }
 
   if (!section) {
-    return <p className="p-8">Section not found.</p>;
+    return (
+      <ParticipantShell>
+        <p className="p-8 text-p5-muted">Section not found.</p>
+      </ParticipantShell>
+    );
   }
 
   return (
-    <div className="min-h-screen bg-p5-sand">
-      <SiteHeader />
-      <main className="mx-auto max-w-2xl px-6 py-12">
-        <p className="text-sm text-p5-teal">
-          Section {sectionIndex + 1} of {catalog.sections.length}
-        </p>
-        <h1 className="font-display text-3xl text-p5-navy">{section.title}</h1>
+    <ParticipantShell>
+      <div className="mx-auto max-w-2xl px-6 py-10">
+        <Progress
+          current={sectionIndex + 1}
+          total={catalog.sections.length}
+        />
 
-        <div className="mt-8 space-y-8">
+        <h1 className="mt-8 font-display text-3xl text-p5-navy text-balance tracking-tight">
+          {section.title}
+        </h1>
+
+        <div className="mt-8 space-y-10">
           {questions.map((question) => (
             <fieldset key={question.questionId} className="space-y-3">
-              <legend className="font-medium text-p5-ink">
+              <legend className="mb-3 block text-base font-medium text-p5-ink leading-snug">
                 {question.text}
-                {question.required && <span className="text-red-500"> *</span>}
+                {question.required && (
+                  <span className="text-red-600" aria-hidden="true">
+                    {" "}
+                    *
+                  </span>
+                )}
               </legend>
               <div className="space-y-2">
                 {question.options.map((option) => (
-                  <label
+                  <OptionChoice
                     key={option.key}
-                    className="flex cursor-pointer items-center gap-3 rounded border border-p5-navy/10 bg-white px-4 py-3 hover:border-p5-teal"
-                  >
-                    <input
-                      type="radio"
-                      name={question.questionId}
-                      value={option.key}
-                      checked={answers[question.questionId]?.[0] === option.key}
-                      onChange={() => setAnswer(question.questionId, option.key)}
-                      className="accent-p5-teal"
-                    />
-                    <span>{option.label}</span>
-                  </label>
+                    name={question.questionId}
+                    value={option.key}
+                    label={option.label}
+                    checked={answers[question.questionId]?.[0] === option.key}
+                    onChange={(value) => setAnswer(question.questionId, value)}
+                  />
                 ))}
               </div>
             </fieldset>
           ))}
         </div>
 
-        {error && <p className="mt-4 text-sm text-red-600">{error}</p>}
+        {error && (
+          <p className="mt-6 text-sm text-red-600" role="alert">
+            {error}
+          </p>
+        )}
 
-        <div className="mt-10 flex justify-between">
+        <div className="sticky bottom-0 -mx-6 mt-10 flex items-center justify-between border-t border-p5-border bg-p5-bg/95 px-6 py-4 backdrop-blur-sm">
           {sectionIndex > 0 ? (
-            <button
-              type="button"
+            <Button
+              variant="ghost"
               onClick={() =>
                 router.push(`/test/${catalog.sections[sectionIndex - 1].slug}`)
               }
-              className="text-p5-teal hover:underline"
             >
               Previous
-            </button>
+            </Button>
           ) : (
             <span />
           )}
-          <button
-            type="button"
-            onClick={handleNext}
-            disabled={submitting}
-            className="rounded bg-p5-navy px-6 py-2 text-white hover:bg-p5-navy/90 disabled:opacity-50"
-          >
+          <Button onClick={handleNext} disabled={submitting}>
             {submitting
               ? "Submitting..."
               : sectionIndex >= catalog.sections.length - 1
                 ? "Submit assessment"
                 : "Next section"}
-          </button>
+          </Button>
         </div>
-      </main>
-    </div>
+      </div>
+    </ParticipantShell>
   );
 }

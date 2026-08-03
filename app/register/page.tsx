@@ -2,7 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
-import { SiteHeader } from "@/components/site-header";
+import { ParticipantShell } from "@/components/features/assessment/participant-shell";
+import { Button } from "@/components/ui/button";
+import { Field } from "@/components/ui/field";
 import { createSubmissionId, saveSession } from "@/lib/session";
 import { getCatalog } from "@/lib/catalog";
 
@@ -36,48 +38,40 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-p5-sand">
-      <SiteHeader />
-      <main className="mx-auto max-w-lg px-6 py-16">
-        <h1 className="font-display text-3xl text-p5-navy">Register</h1>
-        <p className="mt-2 text-p5-ink/70">
-          Enter your details to begin the assessment.
+    <ParticipantShell>
+      <div className="mx-auto max-w-lg px-6 py-16">
+        <h1 className="font-display text-3xl text-p5-navy text-balance tracking-tight">
+          Register
+        </h1>
+        <p className="mt-2 max-w-prose text-p5-muted">
+          Enter your details to begin the assessment. The test takes about 30 minutes
+          across nine sections.
         </p>
         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-          <label className="block">
-            <span className="text-sm font-medium">Full name</span>
-            <input
-              name="fullName"
-              required
-              className="mt-1 w-full rounded border border-p5-navy/20 bg-white px-4 py-2"
-            />
-          </label>
-          <label className="block">
-            <span className="text-sm font-medium">Email</span>
-            <input
-              name="email"
-              type="email"
-              required
-              className="mt-1 w-full rounded border border-p5-navy/20 bg-white px-4 py-2"
-            />
-          </label>
-          <label className="block">
-            <span className="text-sm font-medium">Phone (optional)</span>
-            <input
-              name="phone"
-              type="tel"
-              className="mt-1 w-full rounded border border-p5-navy/20 bg-white px-4 py-2"
-            />
-          </label>
-          {error && <p className="text-sm text-red-600">{error}</p>}
-          <button
-            type="submit"
-            className="w-full rounded bg-p5-teal px-6 py-3 font-medium text-white hover:bg-[#157777]"
-          >
+          <Field name="fullName" label="Full name" required autoComplete="name" />
+          <Field
+            name="email"
+            label="Email"
+            type="email"
+            required
+            autoComplete="email"
+          />
+          <Field
+            name="phone"
+            label="Phone (optional)"
+            type="tel"
+            autoComplete="tel"
+          />
+          {error && (
+            <p className="text-sm text-red-600" role="alert">
+              {error}
+            </p>
+          )}
+          <Button type="submit" variant="secondary" className="w-full">
             Continue to assessment
-          </button>
+          </Button>
         </form>
-      </main>
-    </div>
+      </div>
+    </ParticipantShell>
   );
 }

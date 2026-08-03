@@ -3,7 +3,8 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { SiteHeader } from "@/components/site-header";
+import { ParticipantShell } from "@/components/features/assessment/participant-shell";
+import { PathwayResult } from "@/components/features/results/pathway-result";
 import { clearSession } from "@/lib/session";
 import type { TopRoleRecommendation } from "@/lib/types/catalog";
 
@@ -37,104 +38,75 @@ export default function ResultsPage() {
 
   if (status === "loading") {
     return (
-      <div className="min-h-screen bg-p5-sand">
-        <SiteHeader />
-        <main className="mx-auto max-w-3xl px-6 py-16 text-center">
-          <p>Loading your results...</p>
-        </main>
-      </div>
+      <ParticipantShell>
+        <div className="mx-auto max-w-3xl px-6 py-16 text-center">
+          <p className="text-p5-muted">Loading your results…</p>
+        </div>
+      </ParticipantShell>
     );
   }
 
   if (status === "rejected") {
     return (
-      <div className="min-h-screen bg-p5-sand">
-        <SiteHeader />
-        <main className="mx-auto max-w-3xl px-6 py-16">
-          <h1 className="font-display text-3xl text-p5-navy">Assessment not completed</h1>
-          <p className="mt-4 text-p5-ink/70">
-            Consent was not provided. Your responses have been recorded but no recommendations were generated.
+      <ParticipantShell>
+        <div className="mx-auto max-w-3xl px-6 py-16">
+          <h1 className="font-display text-3xl text-p5-navy text-balance tracking-tight">
+            Assessment not completed
+          </h1>
+          <p className="mt-4 max-w-prose text-p5-muted">
+            Consent was not provided. Your responses have been recorded but no
+            recommendations were generated.
           </p>
-          <Link href="/" className="mt-8 inline-block text-p5-teal hover:underline">
+          <Link
+            href="/"
+            className="focus-ring mt-8 inline-block text-p5-teal hover:underline"
+          >
             Return home
           </Link>
-        </main>
-      </div>
+        </div>
+      </ParticipantShell>
     );
   }
 
   if (status === "not-found" || status === "error") {
     return (
-      <div className="min-h-screen bg-p5-sand">
-        <SiteHeader />
-        <main className="mx-auto max-w-3xl px-6 py-16">
-          <h1 className="font-display text-3xl text-p5-navy">Results unavailable</h1>
-          <p className="mt-4 text-p5-ink/70">
-            We could not load results for this submission.
+      <ParticipantShell>
+        <div className="mx-auto max-w-3xl px-6 py-16">
+          <h1 className="font-display text-3xl text-p5-navy text-balance tracking-tight">
+            Results unavailable
+          </h1>
+          <p className="mt-4 max-w-prose text-p5-muted">
+            We could not load results for this submission. Results are only
+            available immediately after completing the assessment.
           </p>
-          <Link href="/" className="mt-8 inline-block text-p5-teal hover:underline">
+          <Link
+            href="/"
+            className="focus-ring mt-8 inline-block text-p5-teal hover:underline"
+          >
             Return home
           </Link>
-        </main>
-      </div>
+        </div>
+      </ParticipantShell>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-p5-sand to-white">
-      <SiteHeader />
-      <main className="mx-auto max-w-3xl px-6 py-16">
-        <p className="text-sm uppercase tracking-widest text-p5-teal">Your results</p>
-        <h1 className="font-display text-4xl text-p5-navy">Top 3 Role Pathways</h1>
-        <p className="mt-2 text-p5-ink/70">
-          Based on your assessment responses, these are your strongest role-family matches.
+    <ParticipantShell>
+      <div className="mx-auto max-w-3xl px-6 py-16">
+        <h1 className="font-display text-4xl text-p5-navy text-balance tracking-tight">
+          Your top 3 role pathways
+        </h1>
+        <p className="mt-3 max-w-prose text-p5-muted">
+          Based on your assessment responses, these are your strongest role-family
+          matches at Pillar 5.
         </p>
 
-        <div className="mt-10 space-y-6">
+        <div className="mt-12 space-y-10 rounded-xl border border-p5-border bg-p5-surface p-8">
           {topRoles.map((role) => (
-            <article
-              key={role.roleCode}
-              className="rounded-lg border border-p5-navy/10 bg-white p-6 shadow-sm"
-            >
-              <div className="flex items-baseline justify-between">
-                <h2 className="font-display text-2xl text-p5-navy">
-                  #{role.rank} {role.name}
-                </h2>
-                <span className="text-lg font-medium text-p5-teal">
-                  {role.fitScore}%
-                </span>
-              </div>
-              <p className="mt-1 text-sm text-p5-ink/50">{role.roleCode}</p>
-              <div className="mt-4 grid gap-4 md:grid-cols-3">
-                <div>
-                  <h3 className="text-sm font-medium text-p5-gold">Strengths</h3>
-                  <ul className="mt-1 list-inside list-disc text-sm text-p5-ink/80">
-                    {role.reasons.map((r) => (
-                      <li key={r}>{r}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-sm font-medium text-p5-gold">Gaps</h3>
-                  <ul className="mt-1 list-inside list-disc text-sm text-p5-ink/80">
-                    {role.gaps.map((g) => (
-                      <li key={g}>{g}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-sm font-medium text-p5-gold">Next steps</h3>
-                  <ul className="mt-1 list-inside list-disc text-sm text-p5-ink/80">
-                    {role.nextSteps.map((s) => (
-                      <li key={s}>{s}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </article>
+            <PathwayResult key={role.roleCode} role={role} />
           ))}
         </div>
-      </main>
-    </div>
+      </div>
+    </ParticipantShell>
   );
 }

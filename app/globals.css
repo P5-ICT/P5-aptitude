@@ -1,29 +1,113 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand anchors (hex preserved) */
   --p5-navy: #0b1f3a;
   --p5-teal: #1a8f8f;
   --p5-gold: #c9a227;
-  --p5-sand: #f4efe6;
   --p5-ink: #1a1a1a;
+
+  /* Semantic surfaces (OKLCH) */
+  --p5-bg: oklch(0.98 0.005 250);
+  --p5-surface: oklch(1 0 0);
+  --p5-muted: oklch(0.45 0.02 250);
+  --p5-border: oklch(0.88 0.01 250);
+  --p5-navy-deep: oklch(0.22 0.06 250);
+  --p5-teal-hover: oklch(0.48 0.09 195);
+  --p5-gold-hover: oklch(0.72 0.12 85);
+
+  /* Focus */
+  --p5-focus: oklch(0.55 0.12 195);
+
+  /* Z-index scale */
+  --z-sticky: 10;
+  --z-modal: 40;
+  --z-toast: 50;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 400ms;
 }
 
 @theme inline {
   --color-p5-navy: var(--p5-navy);
   --color-p5-teal: var(--p5-teal);
   --color-p5-gold: var(--p5-gold);
-  --color-p5-sand: var(--p5-sand);
   --color-p5-ink: var(--p5-ink);
-  --font-display: "Georgia", "Times New Roman", serif;
-  --font-body: "Segoe UI", system-ui, sans-serif;
+  --color-p5-bg: var(--p5-bg);
+  --color-p5-surface: var(--p5-surface);
+  --color-p5-muted: var(--p5-muted);
+  --color-p5-border: var(--p5-border);
+  --color-p5-teal-hover: var(--p5-teal-hover);
+  --color-p5-gold-hover: var(--p5-gold-hover);
+  --font-display: var(--font-source-serif), "Georgia", serif;
+  --font-body: var(--font-source-sans), system-ui, sans-serif;
 }
 
 body {
   font-family: var(--font-body);
   color: var(--p5-ink);
-  background: var(--p5-sand);
+  background: var(--p5-bg);
 }
 
 .font-display {
   font-family: var(--font-display);
+}
+
+/* Page enter animation */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-enter {
+  animation: page-enter var(--duration-normal) var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-page-enter {
+    animation: none;
+  }
+}
+
+/* Progress bar fill */
+@keyframes progress-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.progress-bar-fill {
+  transform-origin: left;
+  transition: width var(--duration-normal) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar-fill {
+    transition: none;
+  }
+}
+
+/* Landing atmosphere */
+.landing-atmosphere {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, oklch(0.35 0.08 195 / 0.4), transparent),
+    radial-gradient(ellipse 60% 50% at 20% 80%, oklch(0.25 0.05 250 / 0.5), transparent),
+    linear-gradient(160deg, var(--p5-navy) 0%, oklch(0.28 0.07 250) 50%, oklch(0.32 0.08 195) 100%);
+}
+
+/* Focus ring utility */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--p5-focus);
+  outline-offset: 2px;
 }
