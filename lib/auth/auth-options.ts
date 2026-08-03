@@ -1,13 +1,26 @@
 import type { NextAuthOptions } from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
+import AzureADProvider from "next-auth/providers/azure-ad";
 
 const staffDomain = process.env.STAFF_EMAIL_DOMAIN ?? "pillar5group.co.za";
 
 export const authOptions: NextAuthOptions = {
   providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
+    AzureADProvider({
+      clientId: process.env.AZURE_AD_CLIENT_ID ?? "",
+      clientSecret: process.env.AZURE_AD_CLIENT_SECRET ?? "",
+      tenantId: process.env.AZURE_AD_TENANT_ID ?? "common",
+      authorization: {
+        params: { scope: "openid profile email User.Read" },
+      },
+      // Work accounts often expose UPN as preferred_username, not email.
+      profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.name,
+          email: profile.email ?? profile.preferred_username,
+          image: null,
+        };
+      },
     }),
   ],
   pages: {

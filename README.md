@@ -6,7 +6,7 @@ Next.js 15 aptitude assessment for Pillar 5 — participant test flow, automatic
 
 - **Next.js 15** + Tailwind CSS
 - **Airtable** (server-side PAT only)
-- **Auth.js** (Google OAuth for `@pillar5group.co.za` staff)
+- **Auth.js** (Microsoft Entra ID for `@pillar5group.co.za` staff)
 
 ## Setup
 
@@ -27,7 +27,7 @@ Next.js 15 aptitude assessment for Pillar 5 — participant test flow, automatic
 
 ## Deployment
 
-Deploy to Vercel from `P5-ICT/P5-aptitude`. Set env vars: `AIRTABLE_API_KEY`, `AIRTABLE_BASE_ID`, `NEXTAUTH_URL`, `NEXTAUTH_SECRET`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`.
+Deploy to Vercel from `P5-ICT/P5-aptitude`. Set env vars: `AIRTABLE_API_KEY`, `AIRTABLE_BASE_ID`, `NEXTAUTH_URL`, `NEXTAUTH_SECRET`, `AZURE_AD_CLIENT_ID`, `AZURE_AD_CLIENT_SECRET`, `AZURE_AD_TENANT_ID`.
 
 Staff CSV export: use Airtable native table export (no custom export in admin).
 

@@ -6,13 +6,13 @@ import { Suspense } from "react";
 
 const ERROR_MESSAGES: Record<string, string> = {
   AccessDenied:
-    "Access denied. Sign in with a @pillar5group.co.za Google account (or update STAFF_EMAIL_DOMAIN).",
+    "Access denied. Sign in with your @pillar5group.co.za Microsoft account (or update STAFF_EMAIL_DOMAIN).",
   OAuthAccountNotLinked:
-    "This Google account could not be linked. Try again with your staff email.",
+    "This Microsoft account could not be linked. Try again with your staff email.",
   OAuthCallback:
-    "Google sign-in failed (callback error). Check NEXTAUTH_URL and Google redirect URIs.",
+    "Microsoft sign-in failed (callback error). Check NEXTAUTH_URL and Entra redirect URIs.",
   Configuration:
-    "Auth is misconfigured. Check GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, and NEXTAUTH_SECRET.",
+    "Auth is misconfigured. Check AZURE_AD_CLIENT_ID, AZURE_AD_CLIENT_SECRET, AZURE_AD_TENANT_ID, and NEXTAUTH_SECRET.",
   Default: "Sign-in failed. Try again or contact an admin.",
 };
 
@@ -27,7 +27,7 @@ function LoginForm() {
     <div className="rounded-xl border border-white/10 bg-p5-surface p-8">
       <h1 className="font-display text-xl text-p5-navy">Sign in</h1>
       <p className="mt-2 text-sm text-p5-muted">
-        Use your @pillar5group.co.za Google account to access the admin
+        Use your @pillar5group.co.za Microsoft account to access the admin
         dashboard.
       </p>
       {errorMessage && (
@@ -37,10 +37,10 @@ function LoginForm() {
       )}
       <button
         type="button"
-        onClick={() => signIn("google", { callbackUrl: "/admin" })}
+        onClick={() => signIn("azure-ad", { callbackUrl: "/admin" })}
         className="focus-ring mt-6 w-full rounded bg-p5-teal px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-p5-teal-hover"
       >
-        Continue with Google
+        Continue with Microsoft
       </button>
     </div>
   );
