@@ -30,9 +30,20 @@ function isAirtableConfigured(): boolean {
   return Boolean(process.env.AIRTABLE_API_KEY && process.env.AIRTABLE_BASE_ID);
 }
 
+/** Airtable `date` fields reject full ISO datetimes — send YYYY-MM-DD only. */
+function toAirtableDate(value: string): string {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    return value.slice(0, 10);
+  }
+  return parsed.toISOString().slice(0, 10);
+}
+
 async function persistToAirtable(payload: SubmitPayload, scoring: ReturnType<typeof scoreSubmission>) {
   const participantId = payload.submissionId;
   const now = new Date().toISOString();
+  const nowDate = toAirtableDate(now);
+  const startedDate = toAirtableDate(payload.startedAt);
   const consentAnswer = payload.answers.find((a) => a.questionId === "P001")?.selectedOptions[0];
   const consentGiven = consentAnswer === "yes";
 
@@ -60,7 +71,7 @@ async function persistToAirtable(payload: SubmitPayload, scoring: ReturnType<typ
         [PARTICIPANTS_FIELDS.FULL_NAME]: payload.participant.fullName,
         [PARTICIPANTS_FIELDS.EMAIL]: payload.participant.email,
         [PARTICIPANTS_FIELDS.PHONE]: payload.participant.phone ?? "",
-        [PARTICIPANTS_FIELDS.CREATED_AT]: now,
+        [PARTICIPANTS_FIELDS.CREATED_AT]: nowDate,
       },
     ]);
     participantRecordId = created.id;
@@ -72,8 +83,8 @@ async function persistToAirtable(payload: SubmitPayload, scoring: ReturnType<typ
       [SUBMISSIONS_FIELDS.PARTICIPANT_ID]: [participantRecordId],
       [SUBMISSIONS_FIELDS.STATUS]: scoring.status === "rejected" ? "rejected" : "completed",
       [SUBMISSIONS_FIELDS.CONSENT_GIVEN]: consentGiven,
-      [SUBMISSIONS_FIELDS.STARTED_AT]: payload.startedAt,
-      [SUBMISSIONS_FIELDS.COMPLETED_AT]: now,
+      [SUBMISSIONS_FIELDS.STARTED_AT]: startedDate,
+      [SUBMISSIONS_FIELDS.COMPLETED_AT]: nowDate,
     },
   ]);
 
@@ -81,7 +92,7 @@ async function persistToAirtable(payload: SubmitPayload, scoring: ReturnType<typ
     [ANSWERS_FIELDS.SUBMISSION_ID]: [submission.id],
     [ANSWERS_FIELDS.QUESTION_ID]: answer.questionId,
     [ANSWERS_FIELDS.SELECTED_OPTIONS]: JSON.stringify(answer.selectedOptions),
-    [ANSWERS_FIELDS.CREATED_AT]: now,
+    [ANSWERS_FIELDS.CREATED_AT]: nowDate,
   }));
   await createRecords(AIRTABLE_TABLES.ANSWERS, answerFields);
 
@@ -92,7 +103,7 @@ async function persistToAirtable(payload: SubmitPayload, scoring: ReturnType<typ
         [SUBMISSION_RESULTS_FIELDS.COMPETENCY_SCORES]: JSON.stringify(scoring.competencyScores),
         [SUBMISSION_RESULTS_FIELDS.ROLE_SCORES]: JSON.stringify(scoring.roleScores),
         [SUBMISSION_RESULTS_FIELDS.TOP_ROLES]: JSON.stringify(scoring.topRoles),
-        [SUBMISSION_RESULTS_FIELDS.GENERATED_AT]: now,
+        [SUBMISSION_RESULTS_FIELDS.GENERATED_AT]: nowDate,
       },
     ]);
   }
