@@ -1,52 +1,52 @@
 [
   {
     "code": "C01",
-    "name": "Analytical Thinking",
-    "definition": "Demonstrates analytical thinking in work contexts."
+    "name": "C01",
+    "definition": "C01 competency"
   },
   {
     "code": "C02",
-    "name": "Communication",
-    "definition": "Demonstrates communication in work contexts."
+    "name": "C02",
+    "definition": "C02 competency"
   },
   {
     "code": "C03",
-    "name": "Collaboration",
-    "definition": "Demonstrates collaboration in work contexts."
+    "name": "C03",
+    "definition": "C03 competency"
   },
   {
     "code": "C04",
-    "name": "Customer Focus",
-    "definition": "Demonstrates customer focus in work contexts."
+    "name": "C04",
+    "definition": "C04 competency"
   },
   {
     "code": "C05",
-    "name": "Execution",
-    "definition": "Demonstrates execution in work contexts."
+    "name": "C05",
+    "definition": "C05 competency"
   },
   {
     "code": "C06",
-    "name": "Innovation",
-    "definition": "Demonstrates innovation in work contexts."
+    "name": "C06",
+    "definition": "C06 competency"
   },
   {
     "code": "C07",
-    "name": "Leadership",
-    "definition": "Demonstrates leadership in work contexts."
+    "name": "C07",
+    "definition": "C07 competency"
   },
   {
     "code": "C08",
-    "name": "Technical Proficiency",
-    "definition": "Demonstrates technical proficiency in work contexts."
+    "name": "C08",
+    "definition": "C08 competency"
   },
   {
     "code": "C09",
-    "name": "Risk & Compliance",
-    "definition": "Demonstrates risk & compliance in work contexts."
+    "name": "C09",
+    "definition": "C09 competency"
   },
   {
     "code": "C10",
-    "name": "Commercial Acumen",
-    "definition": "Demonstrates commercial acumen in work contexts."
+    "name": "C10",
+    "definition": "C10 competency"
   }
 ]

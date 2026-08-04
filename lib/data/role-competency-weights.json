@@ -2,207 +2,207 @@
   {
     "roleCode": "AO",
     "competencyCode": "C01",
-    "weight": 0.07
+    "weight": 0.1
   },
   {
     "roleCode": "AO",
     "competencyCode": "C02",
-    "weight": 0.088
+    "weight": 0.1
   },
   {
     "roleCode": "AO",
     "competencyCode": "C03",
-    "weight": 0.105
+    "weight": 0.1
   },
   {
     "roleCode": "AO",
     "competencyCode": "C04",
-    "weight": 0.123
+    "weight": 0.25
   },
   {
     "roleCode": "AO",
     "competencyCode": "C05",
-    "weight": 0.14
+    "weight": 0.15
   },
   {
     "roleCode": "AO",
     "competencyCode": "C06",
-    "weight": 0.158
+    "weight": 0.1
   },
   {
     "roleCode": "AO",
     "competencyCode": "C07",
-    "weight": 0.053
+    "weight": 0.05
   },
   {
     "roleCode": "AO",
     "competencyCode": "C08",
-    "weight": 0.07
+    "weight": 0.05
   },
   {
     "roleCode": "AO",
     "competencyCode": "C09",
-    "weight": 0.088
+    "weight": 0.05
   },
   {
     "roleCode": "AO",
     "competencyCode": "C10",
-    "weight": 0.105
+    "weight": 0.05
   },
   {
     "roleCode": "FA",
     "competencyCode": "C01",
-    "weight": 0.079
+    "weight": 0.25
   },
   {
     "roleCode": "FA",
     "competencyCode": "C02",
-    "weight": 0.111
+    "weight": 0.1
   },
   {
     "roleCode": "FA",
     "competencyCode": "C03",
-    "weight": 0.143
+    "weight": 0.05
   },
   {
     "roleCode": "FA",
     "competencyCode": "C04",
-    "weight": 0.063
+    "weight": 0.25
   },
   {
     "roleCode": "FA",
     "competencyCode": "C05",
-    "weight": 0.095
+    "weight": 0.1
   },
   {
     "roleCode": "FA",
     "competencyCode": "C06",
-    "weight": 0.127
+    "weight": 0.05
   },
   {
     "roleCode": "FA",
     "competencyCode": "C07",
-    "weight": 0.048
+    "weight": 0.05
   },
   {
     "roleCode": "FA",
     "competencyCode": "C08",
-    "weight": 0.079
+    "weight": 0.05
   },
   {
     "roleCode": "FA",
     "competencyCode": "C09",
-    "weight": 0.111
+    "weight": 0.05
   },
   {
     "roleCode": "FA",
     "competencyCode": "C10",
-    "weight": 0.143
+    "weight": 0.05
   },
   {
     "roleCode": "DA",
     "competencyCode": "C01",
-    "weight": 0.097
+    "weight": 0.2
   },
   {
     "roleCode": "DA",
     "competencyCode": "C02",
-    "weight": 0.145
+    "weight": 0.2
   },
   {
     "roleCode": "DA",
     "competencyCode": "C03",
-    "weight": 0.081
+    "weight": 0.05
   },
   {
     "roleCode": "DA",
     "competencyCode": "C04",
-    "weight": 0.129
+    "weight": 0.2
   },
   {
     "roleCode": "DA",
     "competencyCode": "C05",
-    "weight": 0.065
+    "weight": 0.2
   },
   {
     "roleCode": "DA",
     "competencyCode": "C06",
-    "weight": 0.113
+    "weight": 0.05
   },
   {
     "roleCode": "DA",
     "competencyCode": "C07",
-    "weight": 0.048
+    "weight": 0.02
   },
   {
     "roleCode": "DA",
     "competencyCode": "C08",
-    "weight": 0.097
+    "weight": 0.02
   },
   {
     "roleCode": "DA",
     "competencyCode": "C09",
-    "weight": 0.145
+    "weight": 0.04
   },
   {
     "roleCode": "DA",
     "competencyCode": "C10",
-    "weight": 0.081
+    "weight": 0.02
   },
   {
     "roleCode": "IT",
     "competencyCode": "C01",
-    "weight": 0.115
+    "weight": 0.1
   },
   {
     "roleCode": "IT",
     "competencyCode": "C02",
-    "weight": 0.066
+    "weight": 0.25
   },
   {
     "roleCode": "IT",
     "competencyCode": "C03",
-    "weight": 0.131
+    "weight": 0.15
   },
   {
     "roleCode": "IT",
     "competencyCode": "C04",
-    "weight": 0.082
+    "weight": 0.1
   },
   {
     "roleCode": "IT",
     "competencyCode": "C05",
-    "weight": 0.148
+    "weight": 0.25
   },
   {
     "roleCode": "IT",
     "competencyCode": "C06",
-    "weight": 0.098
+    "weight": 0.05
   },
   {
     "roleCode": "IT",
     "competencyCode": "C07",
-    "weight": 0.049
+    "weight": 0.02
   },
   {
     "roleCode": "IT",
     "competencyCode": "C08",
-    "weight": 0.115
+    "weight": 0.03
   },
   {
     "roleCode": "IT",
     "competencyCode": "C09",
-    "weight": 0.066
+    "weight": 0.03
   },
   {
     "roleCode": "IT",
     "competencyCode": "C10",
-    "weight": 0.131
+    "weight": 0.02
   },
   {
     "roleCode": "MC",
     "competencyCode": "C01",
-    "weight": 0.133
+    "weight": 0.05
   },
   {
     "roleCode": "MC",
@@ -212,22 +212,22 @@
   {
     "roleCode": "MC",
     "competencyCode": "C03",
-    "weight": 0.067
+    "weight": 0.2
   },
   {
     "roleCode": "MC",
     "competencyCode": "C04",
-    "weight": 0.15
+    "weight": 0.1
   },
   {
     "roleCode": "MC",
     "competencyCode": "C05",
-    "weight": 0.117
+    "weight": 0.1
   },
   {
     "roleCode": "MC",
     "competencyCode": "C06",
-    "weight": 0.083
+    "weight": 0.1
   },
   {
     "roleCode": "MC",
@@ -237,7 +237,7 @@
   {
     "roleCode": "MC",
     "competencyCode": "C08",
-    "weight": 0.133
+    "weight": 0.05
   },
   {
     "roleCode": "MC",
@@ -247,57 +247,57 @@
   {
     "roleCode": "MC",
     "competencyCode": "C10",
-    "weight": 0.067
+    "weight": 0.15
   },
   {
     "roleCode": "SC",
     "competencyCode": "C01",
-    "weight": 0.136
+    "weight": 0.05
   },
   {
     "roleCode": "SC",
     "competencyCode": "C02",
-    "weight": 0.121
+    "weight": 0.05
   },
   {
     "roleCode": "SC",
     "competencyCode": "C03",
-    "weight": 0.106
+    "weight": 0.25
   },
   {
     "roleCode": "SC",
     "competencyCode": "C04",
-    "weight": 0.091
+    "weight": 0.05
   },
   {
     "roleCode": "SC",
     "competencyCode": "C05",
-    "weight": 0.076
+    "weight": 0.1
   },
   {
     "roleCode": "SC",
     "competencyCode": "C06",
-    "weight": 0.061
+    "weight": 0.15
   },
   {
     "roleCode": "SC",
     "competencyCode": "C07",
-    "weight": 0.045
+    "weight": 0.05
   },
   {
     "roleCode": "SC",
     "competencyCode": "C08",
-    "weight": 0.136
+    "weight": 0.1
   },
   {
     "roleCode": "SC",
     "competencyCode": "C09",
-    "weight": 0.121
+    "weight": 0.1
   },
   {
     "roleCode": "SC",
     "competencyCode": "C10",
-    "weight": 0.106
+    "weight": 0.1
   },
   {
     "roleCode": "PC",
@@ -312,17 +312,17 @@
   {
     "roleCode": "PC",
     "competencyCode": "C03",
-    "weight": 0.1
+    "weight": 0.15
   },
   {
     "roleCode": "PC",
     "competencyCode": "C04",
-    "weight": 0.1
+    "weight": 0.2
   },
   {
     "roleCode": "PC",
     "competencyCode": "C05",
-    "weight": 0.1
+    "weight": 0.15
   },
   {
     "roleCode": "PC",
@@ -337,232 +337,232 @@
   {
     "roleCode": "PC",
     "competencyCode": "C08",
-    "weight": 0.1
+    "weight": 0.05
   },
   {
     "roleCode": "PC",
     "competencyCode": "C09",
-    "weight": 0.1
+    "weight": 0.03
   },
   {
     "roleCode": "PC",
     "competencyCode": "C10",
-    "weight": 0.1
+    "weight": 0.02
   },
   {
     "roleCode": "HR",
     "competencyCode": "C01",
-    "weight": 0.07
+    "weight": 0.05
   },
   {
     "roleCode": "HR",
     "competencyCode": "C02",
-    "weight": 0.088
+    "weight": 0.05
   },
   {
     "roleCode": "HR",
     "competencyCode": "C03",
-    "weight": 0.105
+    "weight": 0.2
   },
   {
     "roleCode": "HR",
     "competencyCode": "C04",
-    "weight": 0.123
+    "weight": 0.1
   },
   {
     "roleCode": "HR",
     "competencyCode": "C05",
-    "weight": 0.14
+    "weight": 0.1
   },
   {
     "roleCode": "HR",
     "competencyCode": "C06",
-    "weight": 0.158
+    "weight": 0.2
   },
   {
     "roleCode": "HR",
     "competencyCode": "C07",
-    "weight": 0.053
+    "weight": 0.1
   },
   {
     "roleCode": "HR",
     "competencyCode": "C08",
-    "weight": 0.07
+    "weight": 0.15
   },
   {
     "roleCode": "HR",
     "competencyCode": "C09",
-    "weight": 0.088
+    "weight": 0.03
   },
   {
     "roleCode": "HR",
     "competencyCode": "C10",
-    "weight": 0.105
+    "weight": 0.02
   },
   {
     "roleCode": "BD",
     "competencyCode": "C01",
-    "weight": 0.079
+    "weight": 0.1
   },
   {
     "roleCode": "BD",
     "competencyCode": "C02",
-    "weight": 0.111
+    "weight": 0.05
   },
   {
     "roleCode": "BD",
     "competencyCode": "C03",
-    "weight": 0.143
+    "weight": 0.2
   },
   {
     "roleCode": "BD",
     "competencyCode": "C04",
-    "weight": 0.063
+    "weight": 0.05
   },
   {
     "roleCode": "BD",
     "competencyCode": "C05",
-    "weight": 0.095
+    "weight": 0.1
   },
   {
     "roleCode": "BD",
     "competencyCode": "C06",
-    "weight": 0.127
+    "weight": 0.1
   },
   {
     "roleCode": "BD",
     "competencyCode": "C07",
-    "weight": 0.048
+    "weight": 0.1
   },
   {
     "roleCode": "BD",
     "competencyCode": "C08",
-    "weight": 0.079
+    "weight": 0.05
   },
   {
     "roleCode": "BD",
     "competencyCode": "C09",
-    "weight": 0.111
+    "weight": 0.1
   },
   {
     "roleCode": "BD",
     "competencyCode": "C10",
-    "weight": 0.143
+    "weight": 0.15
   },
   {
     "roleCode": "EN",
     "competencyCode": "C01",
-    "weight": 0.097
+    "weight": 0.1
   },
   {
     "roleCode": "EN",
     "competencyCode": "C02",
-    "weight": 0.145
+    "weight": 0.05
   },
   {
     "roleCode": "EN",
     "competencyCode": "C03",
-    "weight": 0.081
+    "weight": 0.1
   },
   {
     "roleCode": "EN",
     "competencyCode": "C04",
-    "weight": 0.129
+    "weight": 0.05
   },
   {
     "roleCode": "EN",
     "competencyCode": "C05",
-    "weight": 0.065
+    "weight": 0.15
   },
   {
     "roleCode": "EN",
     "competencyCode": "C06",
-    "weight": 0.113
+    "weight": 0.05
   },
   {
     "roleCode": "EN",
     "competencyCode": "C07",
-    "weight": 0.048
+    "weight": 0.15
   },
   {
     "roleCode": "EN",
     "competencyCode": "C08",
-    "weight": 0.097
+    "weight": 0.05
   },
   {
     "roleCode": "EN",
     "competencyCode": "C09",
-    "weight": 0.145
+    "weight": 0.15
   },
   {
     "roleCode": "EN",
     "competencyCode": "C10",
-    "weight": 0.081
+    "weight": 0.15
   },
   {
     "roleCode": "LS",
     "competencyCode": "C01",
-    "weight": 0.115
+    "weight": 0.05
   },
   {
     "roleCode": "LS",
     "competencyCode": "C02",
-    "weight": 0.066
+    "weight": 0.05
   },
   {
     "roleCode": "LS",
     "competencyCode": "C03",
-    "weight": 0.131
+    "weight": 0.15
   },
   {
     "roleCode": "LS",
     "competencyCode": "C04",
-    "weight": 0.082
+    "weight": 0.1
   },
   {
     "roleCode": "LS",
     "competencyCode": "C05",
-    "weight": 0.148
+    "weight": 0.1
   },
   {
     "roleCode": "LS",
     "competencyCode": "C06",
-    "weight": 0.098
+    "weight": 0.15
   },
   {
     "roleCode": "LS",
     "competencyCode": "C07",
-    "weight": 0.049
+    "weight": 0.2
   },
   {
     "roleCode": "LS",
     "competencyCode": "C08",
-    "weight": 0.115
+    "weight": 0.1
   },
   {
     "roleCode": "LS",
     "competencyCode": "C09",
-    "weight": 0.066
+    "weight": 0.05
   },
   {
     "roleCode": "LS",
     "competencyCode": "C10",
-    "weight": 0.131
+    "weight": 0.05
   },
   {
     "roleCode": "PT",
     "competencyCode": "C01",
-    "weight": 0.133
-  },
-  {
-    "roleCode": "PT",
-    "competencyCode": "C02",
     "weight": 0.1
   },
   {
     "roleCode": "PT",
+    "competencyCode": "C02",
+    "weight": 0.2
+  },
+  {
+    "roleCode": "PT",
     "competencyCode": "C03",
-    "weight": 0.067
+    "weight": 0.05
   },
   {
     "roleCode": "PT",
@@ -572,12 +572,12 @@
   {
     "roleCode": "PT",
     "competencyCode": "C05",
-    "weight": 0.117
+    "weight": 0.25
   },
   {
     "roleCode": "PT",
     "competencyCode": "C06",
-    "weight": 0.083
+    "weight": 0.05
   },
   {
     "roleCode": "PT",
@@ -587,16 +587,16 @@
   {
     "roleCode": "PT",
     "competencyCode": "C08",
-    "weight": 0.133
+    "weight": 0.05
   },
   {
     "roleCode": "PT",
     "competencyCode": "C09",
-    "weight": 0.1
+    "weight": 0.05
   },
   {
     "roleCode": "PT",
     "competencyCode": "C10",
-    "weight": 0.067
+    "weight": 0.05
   }
 ]

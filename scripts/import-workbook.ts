@@ -1,6 +1,6 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
-import ExcelJS from "exceljs";
+import XLSX from "xlsx";
 import { createRecords } from "../lib/airtable/client";
 import { AIRTABLE_TABLES } from "../lib/airtable/tables";
 import { writeSeedFiles } from "./generate-seed-data";
@@ -8,30 +8,58 @@ import { writeSeedFiles } from "./generate-seed-data";
 const WORKBOOK_NAME = "Pillar5_Aptitude_Test_Core_Design.xlsx";
 
 async function parseWorkbook(workbookPath: string) {
-  const workbook = new ExcelJS.Workbook();
-  await workbook.xlsx.readFile(workbookPath);
-
-  const rolesSheet = workbook.getWorksheet("Role Families");
-  const weightsSheet = workbook.getWorksheet("Weighting Matrix");
-  const questionsSheet = workbook.getWorksheet("Questions");
+  const workbook = XLSX.readFile(workbookPath);
+  const rolesSheet = workbook.Sheets["Role Families"];
+  const weightsSheet = workbook.Sheets["Weighting Matrix"];
+  const questionsSheet = workbook.Sheets["Questions"];
 
   if (!rolesSheet || !weightsSheet || !questionsSheet) {
     throw new Error("Workbook must contain Role Families, Weighting Matrix, and Questions sheets");
   }
 
+  const toRows = (sheet: XLSX.WorkSheet) =>
+    XLSX.utils.sheet_to_json<(string | number)[]>(sheet, {
+      header: 1,
+      defval: "",
+      raw: false,
+    });
+
+  const findHeaderRow = (rows: (string | number)[][], firstHeader: string) => {
+    const index = rows.findIndex((row) => String(row[0] ?? "").trim() === firstHeader);
+    if (index === -1) {
+      throw new Error(`Could not find header row starting with "${firstHeader}"`);
+    }
+    return index;
+  };
+
+  const getString = (row: (string | number)[], index: number) =>
+    String(row[index] ?? "").trim();
+
+  const getNumber = (row: (string | number)[], index: number) => {
+    const raw = row[index];
+    if (typeof raw === "number") return raw;
+    const normalized = String(raw ?? "").trim();
+    const parsed = normalized.endsWith("%")
+      ? Number(normalized.slice(0, -1)) / 100
+      : Number(normalized);
+    return Number.isFinite(parsed) ? parsed : 0;
+  };
+
+  const roleRows = toRows(rolesSheet);
+  const roleHeaderIndex = findHeaderRow(roleRows, "Role ID");
+
   const roleFamilies: object[] = [];
-  rolesSheet.eachRow((row, rowNumber) => {
-    if (rowNumber === 1) return;
-    const code = String(row.getCell(1).value ?? "").trim();
-    if (!code) return;
+  for (const row of roleRows.slice(roleHeaderIndex + 1)) {
+    const code = getString(row, 0);
+    if (!code) continue;
     roleFamilies.push({
       roleCode: code,
-      name: String(row.getCell(2).value ?? code),
-      description: String(row.getCell(3).value ?? ""),
-      exampleRoles: String(row.getCell(4).value ?? ""),
-      outputTemplate: String(row.getCell(5).value ?? ""),
+      name: getString(row, 1) || code,
+      description: getString(row, 2),
+      exampleRoles: getString(row, 3),
+      outputTemplate: getString(row, 5),
     });
-  });
+  }
 
   const competencies = [
     "C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08", "C09", "C10",
@@ -41,46 +69,48 @@ async function parseWorkbook(workbookPath: string) {
     definition: `${code} competency`,
   }));
 
+  const weightRows = toRows(weightsSheet);
+  const weightHeaderIndex = findHeaderRow(weightRows, "Role ID");
   const roleCompetencyWeights: object[] = [];
-  const headerRow = weightsSheet.getRow(1);
   const compCols: { code: string; col: number }[] = [];
-  headerRow.eachCell((cell, colNumber) => {
-    if (colNumber === 1) return;
-    const code = String(cell.value ?? "").trim();
-    if (code.startsWith("C")) compCols.push({ code, col: colNumber });
-  });
+  for (const [index, value] of weightRows[weightHeaderIndex].entries()) {
+    if (index === 0) continue;
+    const code = String(value ?? "").trim();
+    if (code.startsWith("C")) compCols.push({ code, col: index });
+  }
 
-  weightsSheet.eachRow((row, rowNumber) => {
-    if (rowNumber === 1) return;
-    const roleCode = String(row.getCell(1).value ?? "").trim();
-    if (!roleCode) return;
+  for (const row of weightRows.slice(weightHeaderIndex + 1)) {
+    const roleCode = getString(row, 0);
+    if (!roleCode) continue;
+    if (!/^[A-Z]{2}$/.test(roleCode)) continue;
     for (const { code, col } of compCols) {
-      const raw = Number(row.getCell(col).value ?? 0);
+      const raw = getNumber(row, col);
       roleCompetencyWeights.push({
         roleCode,
         competencyCode: code,
         weight: raw > 1 ? raw / 100 : raw,
       });
     }
-  });
+  }
 
+  const questionRows = toRows(questionsSheet);
+  const questionHeaderIndex = findHeaderRow(questionRows, "Question ID");
   const questions: object[] = [];
-  questionsSheet.eachRow((row, rowNumber) => {
-    if (rowNumber === 1) return;
-    const questionId = String(row.getCell(1).value ?? "").trim();
-    if (!questionId) return;
-    const section = String(row.getCell(3).value ?? "General");
+  for (const [offset, row] of questionRows.slice(questionHeaderIndex + 1).entries()) {
+    const questionId = getString(row, 0);
+    if (!questionId) continue;
+    const section = getString(row, 2) || "General";
     questions.push({
       questionId,
-      order: Number(row.getCell(2).value ?? rowNumber - 1),
+      order: getNumber(row, 1) || offset + 1,
       section,
       sectionSlug: section.toLowerCase().replace(/\s+/g, "-"),
-      text: String(row.getCell(4).value ?? ""),
-      responseType: "single",
-      scoringType: String(row.getCell(6).value ?? "Objective"),
-      primaryCompetency: String(row.getCell(7).value ?? "") || undefined,
-      secondaryCompetency: String(row.getCell(8).value ?? "") || undefined,
-      required: true,
+      text: getString(row, 3),
+      responseType: getString(row, 4) || "single",
+      scoringType: getString(row, 5) || "Objective",
+      primaryCompetency: getString(row, 6) || undefined,
+      secondaryCompetency: getString(row, 7) || undefined,
+      required: /^y(es)?$/i.test(getString(row, 11) || "Yes"),
       options: [
         { key: "A", label: "Option A", scoreValue: 4 },
         { key: "B", label: "Option B", scoreValue: 3 },
@@ -88,7 +118,7 @@ async function parseWorkbook(workbookPath: string) {
         { key: "D", label: "Option D", scoreValue: 1 },
       ],
     });
-  });
+  }
 
   return { roleFamilies, competencies, roleCompetencyWeights, questions };
 }

@@ -1,86 +1,86 @@
 [
   {
     "roleCode": "AO",
-    "name": "Administration & Operations",
-    "description": "Pathway for Administration & Operations roles at Pillar 5.",
-    "exampleRoles": "Administration & Operations Specialist, Administration & Operations Lead",
-    "outputTemplate": "Consider a development conversation focused on Administration & Operations competencies."
+    "name": "Administration and Operations",
+    "description": "Structured support, records, scheduling and process execution.",
+    "exampleRoles": "Administrative Assistant; Office Administrator; Operations Assistant; Records Clerk; Data Capturer",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "FA",
-    "name": "Finance & Accounting",
-    "description": "Pathway for Finance & Accounting roles at Pillar 5.",
-    "exampleRoles": "Finance & Accounting Specialist, Finance & Accounting Lead",
-    "outputTemplate": "Consider a development conversation focused on Finance & Accounting competencies."
+    "name": "Finance and Accounting",
+    "description": "Numerical accuracy, transaction processing, budgeting and financial administration.",
+    "exampleRoles": "Accounts Clerk; Finance Administrator; Bookkeeping Assistant; Payroll Assistant; Creditors/Debtors Clerk",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "DA",
-    "name": "Data & Analytics",
-    "description": "Pathway for Data & Analytics roles at Pillar 5.",
-    "exampleRoles": "Data & Analytics Specialist, Data & Analytics Lead",
-    "outputTemplate": "Consider a development conversation focused on Data & Analytics competencies."
+    "name": "Data and Analytics",
+    "description": "Data cleaning, interpretation, reporting and evidence-based insight.",
+    "exampleRoles": "Data Capturer; Junior Data Analyst; Reporting Assistant; Data Quality Assistant; Research Assistant",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "IT",
-    "name": "Information Technology",
-    "description": "Pathway for Information Technology roles at Pillar 5.",
-    "exampleRoles": "Information Technology Specialist, Information Technology Lead",
-    "outputTemplate": "Consider a development conversation focused on Information Technology competencies."
+    "name": "IT and Technical Support",
+    "description": "Digital troubleshooting, systems support and user assistance.",
+    "exampleRoles": "IT Support Assistant; Help Desk Intern; Hardware Support Assistant; Junior Systems Support; Network Support Intern",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "MC",
-    "name": "Marketing & Communications",
-    "description": "Pathway for Marketing & Communications roles at Pillar 5.",
-    "exampleRoles": "Marketing & Communications Specialist, Marketing & Communications Lead",
-    "outputTemplate": "Consider a development conversation focused on Marketing & Communications competencies."
+    "name": "Marketing and Communications",
+    "description": "Content, messaging, audience engagement and campaign support.",
+    "exampleRoles": "Marketing Assistant; Social Media Assistant; Content Assistant; Communications Intern; Brand Assistant",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "SC",
-    "name": "Supply Chain & Logistics",
-    "description": "Pathway for Supply Chain & Logistics roles at Pillar 5.",
-    "exampleRoles": "Supply Chain & Logistics Specialist, Supply Chain & Logistics Lead",
-    "outputTemplate": "Consider a development conversation focused on Supply Chain & Logistics competencies."
+    "name": "Sales and Customer Service",
+    "description": "Customer engagement, persuasion, service recovery and relationship management.",
+    "exampleRoles": "Sales Consultant; Customer Service Agent; Client Liaison; Call Centre Agent; Account Support Assistant",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "PC",
     "name": "Project Coordination",
-    "description": "Pathway for Project Coordination roles at Pillar 5.",
-    "exampleRoles": "Project Coordination Specialist, Project Coordination Lead",
-    "outputTemplate": "Consider a development conversation focused on Project Coordination competencies."
+    "description": "Planning, tracking, deadlines, resources and cross-team coordination.",
+    "exampleRoles": "Project Administrator; Project Coordinator; Programme Assistant; Implementation Assistant; Operations Coordinator",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "HR",
-    "name": "Human Resources",
-    "description": "Pathway for Human Resources roles at Pillar 5.",
-    "exampleRoles": "Human Resources Specialist, Human Resources Lead",
-    "outputTemplate": "Consider a development conversation focused on Human Resources competencies."
+    "name": "Human Resources and People Support",
+    "description": "Recruitment, onboarding, training, employee support and fair people processes.",
+    "exampleRoles": "HR Assistant; Recruitment Administrator; Training Coordinator; People Operations Intern; Employee Support Assistant",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "BD",
     "name": "Business Development",
-    "description": "Pathway for Business Development roles at Pillar 5.",
-    "exampleRoles": "Business Development Specialist, Business Development Lead",
-    "outputTemplate": "Consider a development conversation focused on Business Development competencies."
+    "description": "Opportunity research, partnerships, proposals and growth support.",
+    "exampleRoles": "Business Development Assistant; Partnerships Assistant; Market Research Assistant; Client Acquisition Assistant; Proposal Assistant",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "EN",
-    "name": "Engineering",
-    "description": "Pathway for Engineering roles at Pillar 5.",
-    "exampleRoles": "Engineering Specialist, Engineering Lead",
-    "outputTemplate": "Consider a development conversation focused on Engineering competencies."
+    "name": "Entrepreneurship and Business Ownership",
+    "description": "Opportunity creation, commercial judgement, resilience and independent execution.",
+    "exampleRoles": "Entrepreneur; Small Business Owner; Freelancer; Start-up Founder; Social Entrepreneur; Independent Consultant",
+    "outputTemplate": "Entrepreneurial readiness level, strengths, risks, support needs and business-development next steps."
   },
   {
     "roleCode": "LS",
-    "name": "Legal & Compliance",
-    "description": "Pathway for Legal & Compliance roles at Pillar 5.",
-    "exampleRoles": "Legal & Compliance Specialist, Legal & Compliance Lead",
-    "outputTemplate": "Consider a development conversation focused on Legal & Compliance competencies."
+    "name": "Leadership and Supervision",
+    "description": "Accountability, delegation, performance support and team direction.",
+    "exampleRoles": "Team Leader; Supervisor; Shift Leader; Programme Coordinator; Junior Manager",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   },
   {
     "roleCode": "PT",
-    "name": "People & Talent",
-    "description": "Pathway for People & Talent roles at Pillar 5.",
-    "exampleRoles": "People & Talent Specialist, People & Talent Lead",
-    "outputTemplate": "Consider a development conversation focused on People & Talent competencies."
+    "name": "Practical and Technical Work",
+    "description": "Hands-on installation, maintenance, repair and safe technical execution.",
+    "exampleRoles": "Technician Assistant; Maintenance Assistant; Installation Assistant; Trade Apprentice; Equipment Operator",
+    "outputTemplate": "Role-fit score, reasons for fit, development gaps and suggested next steps."
   }
 ]
