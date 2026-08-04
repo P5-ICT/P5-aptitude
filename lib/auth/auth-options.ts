@@ -1,24 +1,39 @@
+import { timingSafeEqual } from "crypto";
 import type { NextAuthOptions } from "next-auth";
-import AzureADProvider from "next-auth/providers/azure-ad";
+import CredentialsProvider from "next-auth/providers/credentials";
 
-const staffDomain = process.env.STAFF_EMAIL_DOMAIN ?? "pillar5group.co.za";
+function passwordsMatch(input: string, expected: string): boolean {
+  const inputBuffer = Buffer.from(input);
+  const expectedBuffer = Buffer.from(expected);
+
+  if (inputBuffer.length !== expectedBuffer.length) {
+    timingSafeEqual(inputBuffer, inputBuffer);
+    return false;
+  }
+
+  return timingSafeEqual(inputBuffer, expectedBuffer);
+}
 
 export const authOptions: NextAuthOptions = {
   providers: [
-    AzureADProvider({
-      clientId: process.env.AZURE_AD_CLIENT_ID ?? "",
-      clientSecret: process.env.AZURE_AD_CLIENT_SECRET ?? "",
-      tenantId: process.env.AZURE_AD_TENANT_ID ?? "common",
-      authorization: {
-        params: { scope: "openid profile email User.Read" },
+    CredentialsProvider({
+      id: "credentials",
+      name: "Admin password",
+      credentials: {
+        password: { label: "Password", type: "password" },
       },
-      // Work accounts often expose UPN as preferred_username, not email.
-      profile(profile) {
+      async authorize(credentials) {
+        const expected = process.env.ADMIN_PASSWORD;
+        const password = credentials?.password ?? "";
+
+        if (!expected || !passwordsMatch(password, expected)) {
+          return null;
+        }
+
         return {
-          id: profile.sub,
-          name: profile.name,
-          email: profile.email ?? profile.preferred_username,
-          image: null,
+          id: "admin",
+          name: "Staff",
+          email: "admin@pillar5group.co.za",
         };
       },
     }),
@@ -27,12 +42,8 @@ export const authOptions: NextAuthOptions = {
     signIn: "/admin/login",
   },
   callbacks: {
-    async signIn({ user }) {
-      const email = user.email?.toLowerCase() ?? "";
-      return email.endsWith(`@${staffDomain}`);
-    },
     async jwt({ token, user }) {
-      if (user?.email) {
+      if (user) {
         token.role = "staff";
       }
       return token;

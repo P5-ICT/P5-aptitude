@@ -15,10 +15,7 @@ The app scaffold is complete. Follow these steps to go from code to a working de
 | `AIRTABLE_BASE_ID` | Airtable base URL → `https://airtable.com/appXXXXXXXX/...` |
 | `NEXTAUTH_URL` | `http://localhost:3000` for local dev |
 | `NEXTAUTH_SECRET` | Run `openssl rand -base64 32` (or any long random string) |
-| `AZURE_AD_CLIENT_ID` | Microsoft Entra → App registration → Application (client) ID |
-| `AZURE_AD_CLIENT_SECRET` | Same app → Certificates & secrets → New client secret |
-| `AZURE_AD_TENANT_ID` | Entra → Overview → Directory (tenant) ID |
-| `STAFF_EMAIL_DOMAIN` | Optional — defaults to `pillar5group.co.za` |
+| `ADMIN_PASSWORD` | Shared staff password for admin login (interim; replace with Entra later) |
 
 3. Install and run:
 
@@ -68,21 +65,13 @@ npm run import-workbook -- --sync-airtable
 
 ---
 
-## 4. Microsoft Entra ID (staff admin login)
+## 4. Staff admin login (interim master password)
 
-1. In [Microsoft Entra admin center](https://entra.microsoft.com/) → **App registrations** → **New registration**.
-2. Name it (e.g. `P5 Aptitude Admin`). Supported account types: **Accounts in this organizational directory only**.
-3. Under **Authentication** → **Add a platform** → **Web**, add redirect URIs:
-   - Local: `http://localhost:3000/api/auth/callback/azure-ad`
-   - Production: `https://p5-aptitude.vercel.app/api/auth/callback/azure-ad`
-4. Create a client secret under **Certificates & secrets**.
-5. Copy into `.env` / Vercel:
-   - Application (client) ID → `AZURE_AD_CLIENT_ID`
-   - Client secret value → `AZURE_AD_CLIENT_SECRET`
-   - Directory (tenant) ID → `AZURE_AD_TENANT_ID`
-6. Only `@pillar5group.co.za` accounts (or your `STAFF_EMAIL_DOMAIN`) can sign in.
+1. Set `ADMIN_PASSWORD` in `.env.local` (and Vercel for production).
+2. Share the password only with staff who need admin access.
+3. Test at [http://localhost:3000/admin/login](http://localhost:3000/admin/login) — use **Admin login** in the site header or go directly to that URL.
 
-Test admin at [http://localhost:3000/admin/login](http://localhost:3000/admin/login).
+**Later:** swap to Microsoft Entra ID with `@pillar5group.co.za` email restriction when P5 is ready.
 
 ---
 
@@ -93,7 +82,7 @@ Test admin at [http://localhost:3000/admin/login](http://localhost:3000/admin/lo
 - [ ] Airtable **Submissions**, **Answers**, and **Submission Results** rows created
 - [ ] **Submission Results.TopRoles** contains JSON with exactly 3 ranked recommendations
 - [ ] No-consent path: status `rejected`, no results row
-- [ ] Staff login works with allowed Microsoft / `@pillar5group.co.za` account
+- [ ] Staff login works with the shared admin password
 - [ ] Admin list shows participant name, status, and primary top role
 - [ ] Admin detail shows full top 3 + competency and role scores (from Airtable, not re-scored)
 - [ ] Run `npm test` and `npm run build` — both pass
@@ -106,7 +95,7 @@ Test admin at [http://localhost:3000/admin/login](http://localhost:3000/admin/lo
 2. Connect the repo in Vercel (P5 org).
 3. Set all env vars from `.env.example` in Vercel project settings.
 4. Update `NEXTAUTH_URL` to your production URL.
-5. Add the production Entra redirect URI (`…/api/auth/callback/azure-ad`).
+5. Set `ADMIN_PASSWORD` in Vercel (same value as local, or a production-only password).
 6. Deploy from `main`; use preview URLs for PR testing.
 
 ---
