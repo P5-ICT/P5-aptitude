@@ -12,7 +12,7 @@ export default function RegisterPage() {
   const router = useRouter();
   const [error, setError] = useState("");
   const catalog = getCatalog();
-  const firstSection = catalog.sections[0]?.slug ?? "consent-profile";
+  const firstSection = catalog.sections[0]?.slug ?? "profile-and-exposure";
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();

@@ -1,46 +1,46 @@
 [
   {
-    "slug": "consent-profile",
-    "title": "Consent & Profile",
+    "slug": "profile-and-exposure",
+    "title": "Profile & Exposure",
     "order": 1
   },
   {
-    "slug": "exposure",
-    "title": "Experience & Exposure",
+    "slug": "analytical-and-numerical",
+    "title": "Analytical & Numerical",
     "order": 2
   },
   {
-    "slug": "objective-1",
-    "title": "Knowledge Check I",
+    "slug": "digital-and-technical",
+    "title": "Digital & Technical",
     "order": 3
   },
   {
-    "slug": "objective-2",
-    "title": "Knowledge Check II",
+    "slug": "communication",
+    "title": "Communication",
     "order": 4
   },
   {
-    "slug": "judgement-1",
-    "title": "Situational Judgement I",
+    "slug": "organisation-and-problem-solving",
+    "title": "Organisation & Problem-Solving",
     "order": 5
   },
   {
-    "slug": "judgement-2",
-    "title": "Situational Judgement II",
+    "slug": "workplace-judgement-and-teamwork",
+    "title": "Workplace Judgement & Teamwork",
     "order": 6
   },
   {
-    "slug": "judgement-3",
-    "title": "Situational Judgement III",
+    "slug": "leadership-and-conflict",
+    "title": "Leadership & Conflict",
     "order": 7
   },
   {
-    "slug": "self-report",
-    "title": "Work Style",
+    "slug": "work-style-and-adaptability",
+    "title": "Work Style & Adaptability",
     "order": 8
   },
   {
-    "slug": "interest",
+    "slug": "career-interests",
     "title": "Career Interests",
     "order": 9
   }

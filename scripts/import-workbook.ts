@@ -50,6 +50,28 @@ function loadEnvFiles() {
 
 loadEnvFiles();
 
+/** Turn workbook section titles into URL-safe slugs (e.g. "Profile & Exposure" → "profile-exposure"). */
+function slugifySection(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function deriveSections(questions: Question[]) {
+  const seen = new Map<string, { slug: string; title: string; order: number }>();
+  for (const question of questions) {
+    if (seen.has(question.sectionSlug)) continue;
+    seen.set(question.sectionSlug, {
+      slug: question.sectionSlug,
+      title: question.section,
+      order: seen.size + 1,
+    });
+  }
+  return [...seen.values()];
+}
+
 function mapResponseType(raw: string): Question["responseType"] {
   const normalized = raw.toLowerCase();
   if (normalized.includes("multi")) return "multi";
@@ -210,7 +232,7 @@ async function parseWorkbook(workbookPath: string) {
       questionId,
       order: getNumber(row, 1) || offset + 1,
       section,
-      sectionSlug: section.toLowerCase().replace(/\s+/g, "-"),
+      sectionSlug: slugifySection(section),
       text: getString(row, 3),
       responseType: mapResponseType(getString(row, 4)),
       scoringType: mapScoringType(getString(row, 5) || "Objective"),
@@ -375,16 +397,14 @@ async function main() {
   if (existsSync(workbookPath)) {
     console.log(`Parsing workbook: ${workbookPath}`);
     const parsed = await parseWorkbook(workbookPath);
-    const { writeFileSync, mkdirSync, readFileSync: readFs } = await import("node:fs");
+    const { writeFileSync, mkdirSync } = await import("node:fs");
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, "role-families.json"), JSON.stringify(parsed.roleFamilies, null, 2));
     writeFileSync(join(outDir, "competencies.json"), JSON.stringify(parsed.competencies, null, 2));
     writeFileSync(join(outDir, "role-competency-weights.json"), JSON.stringify(parsed.roleCompetencyWeights, null, 2));
     writeFileSync(join(outDir, "questions.json"), JSON.stringify(parsed.questions, null, 2));
-    const sectionsPath = join(outDir, "sections.json");
-    const sections = existsSync(sectionsPath)
-      ? JSON.parse(readFs(sectionsPath, "utf8"))
-      : [];
+    const sections = deriveSections(parsed.questions);
+    writeFileSync(join(outDir, "sections.json"), JSON.stringify(sections, null, 2));
     data = { ...parsed, sections };
     validate(parsed);
   } else {
