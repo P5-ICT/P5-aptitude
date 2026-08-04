@@ -1,52 +1,52 @@
 [
   {
     "code": "C01",
-    "name": "C01",
-    "definition": "C01 competency"
+    "name": "Analytical and Numerical Ability",
+    "definition": "Works with numbers, compares information, identifies patterns and draws logical conclusions."
   },
   {
     "code": "C02",
-    "name": "C02",
-    "definition": "C02 competency"
+    "name": "Digital and Technical Ability",
+    "definition": "Uses digital tools, learns systems and resolves basic technical problems."
   },
   {
     "code": "C03",
-    "name": "C03",
-    "definition": "C03 competency"
+    "name": "Communication",
+    "definition": "Explains, listens, writes and adapts messages clearly and professionally."
   },
   {
     "code": "C04",
-    "name": "C04",
-    "definition": "C04 competency"
+    "name": "Organisation and Attention to Detail",
+    "definition": "Plans work, follows procedures, manages records and identifies errors."
   },
   {
     "code": "C05",
-    "name": "C05",
-    "definition": "C05 competency"
+    "name": "Problem-Solving",
+    "definition": "Identifies causes, evaluates options and selects practical evidence-based actions."
   },
   {
     "code": "C06",
-    "name": "C06",
-    "definition": "C06 competency"
+    "name": "People and Teamwork",
+    "definition": "Cooperates, supports shared goals and works respectfully with different people."
   },
   {
     "code": "C07",
-    "name": "C07",
-    "definition": "C07 competency"
+    "name": "Leadership and Decision-Making",
+    "definition": "Takes responsibility, guides others and makes accountable decisions."
   },
   {
     "code": "C08",
-    "name": "C08",
-    "definition": "C08 competency"
+    "name": "Conflict Management and Emotional Regulation",
+    "definition": "Remains calm, listens, handles criticism and resolves disagreement fairly."
   },
   {
     "code": "C09",
-    "name": "C09",
-    "definition": "C09 competency"
+    "name": "Initiative, Creativity and Adaptability",
+    "definition": "Acts without constant prompting, improves processes and adjusts to change."
   },
   {
     "code": "C10",
-    "name": "C10",
-    "definition": "C10 competency"
+    "name": "Commercial and Entrepreneurial Thinking",
+    "definition": "Recognises opportunities, understands customer value, costs, revenue and calculated risk."
   }
 ]

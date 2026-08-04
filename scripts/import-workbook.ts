@@ -1,11 +1,102 @@
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import XLSX from "xlsx";
 import { createRecords } from "../lib/airtable/client";
-import { AIRTABLE_TABLES } from "../lib/airtable/tables";
+import {
+  AIRTABLE_TABLES,
+  COMPETENCIES_FIELDS,
+  QUESTION_OPTIONS_FIELDS,
+  QUESTIONS_FIELDS,
+  ROLE_COMPETENCY_WEIGHTS_FIELDS,
+  ROLE_FAMILIES_FIELDS,
+} from "../lib/airtable/tables";
+import type {
+  Competency,
+  Question,
+  QuestionOption,
+  RoleCompetencyWeight,
+  RoleFamily,
+  ScoringType,
+} from "../lib/types/catalog";
 import { writeSeedFiles } from "./generate-seed-data";
 
 const WORKBOOK_NAME = "Pillar5_Aptitude_Test_Core_Design.xlsx";
+
+/** Load .env then .env.local (later wins). Does not override shell-exported vars. */
+function loadEnvFiles() {
+  const preexisting = new Set(Object.keys(process.env));
+  for (const name of [".env", ".env.local"]) {
+    const path = join(process.cwd(), name);
+    if (!existsSync(path)) continue;
+    for (const line of readFileSync(path, "utf8").split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+      const eq = trimmed.indexOf("=");
+      if (eq <= 0) continue;
+      const key = trimmed.slice(0, eq).trim();
+      let value = trimmed.slice(eq + 1).trim();
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
+        value = value.slice(1, -1);
+      }
+      if (!preexisting.has(key)) {
+        process.env[key] = value;
+      }
+    }
+  }
+}
+
+loadEnvFiles();
+
+function mapResponseType(raw: string): Question["responseType"] {
+  const normalized = raw.toLowerCase();
+  if (normalized.includes("multi")) return "multi";
+  return "single";
+}
+
+function mapScoringType(raw: string): ScoringType {
+  const normalized = raw.trim().toLowerCase();
+  if (normalized === "self-report" || normalized === "selfreport") return "Self-report";
+  if (normalized === "context" || normalized === "profile") return "Context";
+  if (normalized === "consent") return "Consent";
+  if (normalized === "exposure") return "Exposure";
+  if (normalized === "judgement") return "Judgement";
+  if (normalized === "interest") return "Interest";
+  return "Objective";
+}
+
+/** Airtable ScoringType select uses SelfReport / Profile instead of workbook labels. */
+function toAirtableScoringType(scoringType: ScoringType): string {
+  if (scoringType === "Self-report") return "SelfReport";
+  if (scoringType === "Context") return "Profile";
+  return scoringType;
+}
+
+function parseScoreMap(scoringKey: string): Map<string, number> {
+  const scores = new Map<string, number>();
+  for (const match of scoringKey.matchAll(/([A-Z])\s*=\s*(-?\d+(?:\.\d+)?)/g)) {
+    scores.set(match[1], Number(match[2]));
+  }
+  return scores;
+}
+
+function parseOptions(answerOptions: string, scoringKey: string): QuestionOption[] {
+  const scores = parseScoreMap(scoringKey);
+  const options: QuestionOption[] = [];
+  for (const line of answerOptions.split(/\r?\n/)) {
+    const match = line.trim().match(/^([A-Z])\.\s*(.+)$/);
+    if (!match) continue;
+    const key = match[1];
+    options.push({
+      key,
+      label: match[2].trim(),
+      scoreValue: scores.get(key) ?? 0,
+    });
+  }
+  return options;
+}
 
 async function parseWorkbook(workbookPath: string) {
   const workbook = XLSX.readFile(workbookPath);
@@ -48,10 +139,10 @@ async function parseWorkbook(workbookPath: string) {
   const roleRows = toRows(rolesSheet);
   const roleHeaderIndex = findHeaderRow(roleRows, "Role ID");
 
-  const roleFamilies: object[] = [];
+  const roleFamilies: RoleFamily[] = [];
   for (const row of roleRows.slice(roleHeaderIndex + 1)) {
     const code = getString(row, 0);
-    if (!code) continue;
+    if (!code || !/^[A-Z]{2}$/.test(code)) continue;
     roleFamilies.push({
       roleCode: code,
       name: getString(row, 1) || code,
@@ -61,28 +152,19 @@ async function parseWorkbook(workbookPath: string) {
     });
   }
 
-  const competencies = [
-    "C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08", "C09", "C10",
-  ].map((code) => ({
-    code,
-    name: code,
-    definition: `${code} competency`,
-  }));
-
   const weightRows = toRows(weightsSheet);
   const weightHeaderIndex = findHeaderRow(weightRows, "Role ID");
-  const roleCompetencyWeights: object[] = [];
+  const roleCompetencyWeights: RoleCompetencyWeight[] = [];
   const compCols: { code: string; col: number }[] = [];
   for (const [index, value] of weightRows[weightHeaderIndex].entries()) {
     if (index === 0) continue;
     const code = String(value ?? "").trim();
-    if (code.startsWith("C")) compCols.push({ code, col: index });
+    if (/^C\d{2}$/.test(code)) compCols.push({ code, col: index });
   }
 
   for (const row of weightRows.slice(weightHeaderIndex + 1)) {
     const roleCode = getString(row, 0);
-    if (!roleCode) continue;
-    if (!/^[A-Z]{2}$/.test(roleCode)) continue;
+    if (!roleCode || !/^[A-Z]{2}$/.test(roleCode)) continue;
     for (const { code, col } of compCols) {
       const raw = getNumber(row, col);
       roleCompetencyWeights.push({
@@ -93,30 +175,50 @@ async function parseWorkbook(workbookPath: string) {
     }
   }
 
+  const competenciesByCode = new Map<string, Competency>(
+    compCols.map(({ code }) => [
+      code,
+      { code, name: code, definition: `${code} competency` },
+    ]),
+  );
+  const legendHeaderIndex = weightRows.findIndex(
+    (row) => getString(row, 0) === "Code" && getString(row, 1) === "Competency",
+  );
+  if (legendHeaderIndex >= 0) {
+    for (const row of weightRows.slice(legendHeaderIndex + 1)) {
+      const code = getString(row, 0);
+      if (!/^C\d{2}$/.test(code)) continue;
+      competenciesByCode.set(code, {
+        code,
+        name: getString(row, 1) || code,
+        definition: getString(row, 4) || `${code} competency`,
+      });
+    }
+  }
+  const competencies = [...competenciesByCode.values()];
+
   const questionRows = toRows(questionsSheet);
   const questionHeaderIndex = findHeaderRow(questionRows, "Question ID");
-  const questions: object[] = [];
+  const questions: Question[] = [];
   for (const [offset, row] of questionRows.slice(questionHeaderIndex + 1).entries()) {
     const questionId = getString(row, 0);
     if (!questionId) continue;
     const section = getString(row, 2) || "General";
+    const scoringKey = getString(row, 9);
+    const notes = getString(row, 12) || undefined;
     questions.push({
       questionId,
       order: getNumber(row, 1) || offset + 1,
       section,
       sectionSlug: section.toLowerCase().replace(/\s+/g, "-"),
       text: getString(row, 3),
-      responseType: getString(row, 4) || "single",
-      scoringType: getString(row, 5) || "Objective",
+      responseType: mapResponseType(getString(row, 4)),
+      scoringType: mapScoringType(getString(row, 5) || "Objective"),
       primaryCompetency: getString(row, 6) || undefined,
       secondaryCompetency: getString(row, 7) || undefined,
       required: /^y(es)?$/i.test(getString(row, 11) || "Yes"),
-      options: [
-        { key: "A", label: "Option A", scoreValue: 4 },
-        { key: "B", label: "Option B", scoreValue: 3 },
-        { key: "C", label: "Option C", scoreValue: 2 },
-        { key: "D", label: "Option D", scoreValue: 1 },
-      ],
+      notes,
+      options: parseOptions(getString(row, 8), scoringKey),
     });
   }
 
@@ -124,9 +226,9 @@ async function parseWorkbook(workbookPath: string) {
 }
 
 function validate(data: {
-  roleFamilies: object[];
-  questions: object[];
-  roleCompetencyWeights: { roleCode: string; weight: number }[];
+  roleFamilies: RoleFamily[];
+  questions: Question[];
+  roleCompetencyWeights: RoleCompetencyWeight[];
 }) {
   if (data.roleFamilies.length !== 12) {
     throw new Error(`Expected 12 role families, got ${data.roleFamilies.length}`);
@@ -146,20 +248,122 @@ function validate(data: {
   }
 }
 
-async function syncToAirtable(data: ReturnType<typeof writeSeedFiles>) {
+type CatalogSyncData = {
+  roleFamilies: RoleFamily[];
+  competencies: Competency[];
+  roleCompetencyWeights: RoleCompetencyWeight[];
+  questions: Question[];
+};
+
+type CatalogData = CatalogSyncData & {
+  sections: { slug: string; title: string; order: number }[];
+};
+
+async function syncToAirtable(data: CatalogSyncData) {
   if (!process.env.AIRTABLE_API_KEY || !process.env.AIRTABLE_BASE_ID) {
     console.log("Skipping Airtable sync — credentials not set");
     return;
   }
 
-  await createRecords(AIRTABLE_TABLES.ROLE_FAMILIES, data.roleFamilies as never);
-  await createRecords(AIRTABLE_TABLES.COMPETENCIES, data.competencies as never);
+  const roleRecords = await createRecords(
+    AIRTABLE_TABLES.ROLE_FAMILIES,
+    data.roleFamilies.map((role) => ({
+      [ROLE_FAMILIES_FIELDS.ROLE_CODE]: role.roleCode,
+      [ROLE_FAMILIES_FIELDS.NAME]: role.name,
+      [ROLE_FAMILIES_FIELDS.DESCRIPTION]: role.description,
+      [ROLE_FAMILIES_FIELDS.EXAMPLE_ROLES]: role.exampleRoles,
+      [ROLE_FAMILIES_FIELDS.OUTPUT_TEMPLATE]: role.outputTemplate,
+    })),
+  );
+  const roleIds = new Map(
+    roleRecords.map((record) => [
+      String(record.fields[ROLE_FAMILIES_FIELDS.ROLE_CODE] ?? ""),
+      record.id,
+    ]),
+  );
+
+  const competencyRecords = await createRecords(
+    AIRTABLE_TABLES.COMPETENCIES,
+    data.competencies.map((competency) => ({
+      [COMPETENCIES_FIELDS.CODE]: competency.code,
+      [COMPETENCIES_FIELDS.NAME]: competency.name,
+      [COMPETENCIES_FIELDS.DEFINITION]: competency.definition,
+    })),
+  );
+  const competencyIds = new Map(
+    competencyRecords.map((record) => [
+      String(record.fields[COMPETENCIES_FIELDS.CODE] ?? ""),
+      record.id,
+    ]),
+  );
+
   await createRecords(
     AIRTABLE_TABLES.ROLE_COMPETENCY_WEIGHTS,
-    data.roleCompetencyWeights as never,
+    data.roleCompetencyWeights.flatMap((weight) => {
+      const roleId = roleIds.get(weight.roleCode);
+      const competencyId = competencyIds.get(weight.competencyCode);
+      if (!roleId || !competencyId) return [];
+      return [
+        {
+          [ROLE_COMPETENCY_WEIGHTS_FIELDS.ROLE_CODE]: [roleId],
+          [ROLE_COMPETENCY_WEIGHTS_FIELDS.COMPETENCY_CODE]: [competencyId],
+          [ROLE_COMPETENCY_WEIGHTS_FIELDS.WEIGHT]: weight.weight,
+        },
+      ];
+    }),
   );
-  await createRecords(AIRTABLE_TABLES.QUESTIONS, data.questions as never);
-  console.log("Synced catalog to Airtable");
+
+  const questionRecords = await createRecords(
+    AIRTABLE_TABLES.QUESTIONS,
+    data.questions.map((question) => {
+      const fields: Record<string, unknown> = {
+        [QUESTIONS_FIELDS.QUESTION_ID]: question.questionId,
+        [QUESTIONS_FIELDS.ORDER]: question.order,
+        [QUESTIONS_FIELDS.SECTION]: question.section,
+        [QUESTIONS_FIELDS.TEXT]: question.text,
+        [QUESTIONS_FIELDS.RESPONSE_TYPE]: question.responseType,
+        [QUESTIONS_FIELDS.SCORING_TYPE]: toAirtableScoringType(question.scoringType),
+        [QUESTIONS_FIELDS.REQUIRED]: question.required,
+      };
+      if (question.primaryCompetency) {
+        fields[QUESTIONS_FIELDS.PRIMARY_COMPETENCY] = question.primaryCompetency;
+      }
+      if (question.secondaryCompetency) {
+        fields[QUESTIONS_FIELDS.SECONDARY_COMPETENCY] = question.secondaryCompetency;
+      }
+      if (question.notes) {
+        fields[QUESTIONS_FIELDS.NOTES] = question.notes;
+      }
+      return fields;
+    }),
+  );
+  const questionIds = new Map(
+    questionRecords.map((record) => [
+      String(record.fields[QUESTIONS_FIELDS.QUESTION_ID] ?? ""),
+      record.id,
+    ]),
+  );
+
+  const optionFields = data.questions.flatMap((question) => {
+    const questionId = questionIds.get(question.questionId);
+    if (!questionId) return [];
+    return question.options.map((option) => ({
+      [QUESTION_OPTIONS_FIELDS.QUESTION_ID]: [questionId],
+      [QUESTION_OPTIONS_FIELDS.KEY]: option.key,
+      [QUESTION_OPTIONS_FIELDS.LABEL]: option.label,
+      [QUESTION_OPTIONS_FIELDS.SCORE_VALUE]: option.scoreValue,
+      ...(option.mapsTo?.length
+        ? { [QUESTION_OPTIONS_FIELDS.MAPS_TO]: option.mapsTo.join(", ") }
+        : {}),
+    }));
+  });
+  if (optionFields.length > 0) {
+    await createRecords(AIRTABLE_TABLES.QUESTION_OPTIONS, optionFields);
+  }
+
+  console.log(
+    `Synced catalog to Airtable: ${data.roleFamilies.length} roles, ${data.competencies.length} competencies, ${data.roleCompetencyWeights.length} weights, ${data.questions.length} questions, ${optionFields.length} options`,
+  );
 }
 
 async function main() {
@@ -167,7 +371,7 @@ async function main() {
   const outDir = join(process.cwd(), "lib", "data");
   const syncAirtable = process.argv.includes("--sync-airtable");
 
-  let data;
+  let data: CatalogData;
   if (existsSync(workbookPath)) {
     console.log(`Parsing workbook: ${workbookPath}`);
     const parsed = await parseWorkbook(workbookPath);
@@ -182,11 +386,11 @@ async function main() {
       ? JSON.parse(readFs(sectionsPath, "utf8"))
       : [];
     data = { ...parsed, sections };
-    validate(parsed as never);
+    validate(parsed);
   } else {
     console.log(`Workbook not found — generating seed data`);
     data = writeSeedFiles(outDir);
-    validate(data as never);
+    validate(data);
   }
 
   console.log(
@@ -194,7 +398,7 @@ async function main() {
   );
 
   if (syncAirtable) {
-    await syncToAirtable(data as never);
+    await syncToAirtable(data);
   }
 }
 

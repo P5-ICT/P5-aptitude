@@ -1,5 +1,6 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
+import type { Question } from "../lib/types/catalog";
 
 const ROLE_CODES = ["AO", "FA", "DA", "IT", "MC", "SC", "PC", "HR", "BD", "EN", "LS", "PT"] as const;
 
@@ -83,8 +84,8 @@ function optionKeys(count: number) {
   return Array.from({ length: count }, (_, i) => String.fromCharCode(65 + i));
 }
 
-function generateQuestions() {
-  const questions: object[] = [];
+function generateQuestions(): Question[] {
+  const questions: Question[] = [];
   let order = 1;
 
   questions.push({

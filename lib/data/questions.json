@@ -5,29 +5,20 @@
     "section": "Profile & Exposure",
     "sectionSlug": "profile-&-exposure",
     "text": "I consent to my responses being used for role-matching, development and programme placement, subject to human review.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Consent",
     "required": true,
+    "notes": "If No is selected, do not continue or score the submission.",
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Yes, I consent",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
-      },
-      {
-        "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
-      },
-      {
-        "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "No, I do not consent",
+        "scoreValue": 0
       }
     ]
   },
@@ -37,29 +28,39 @@
     "section": "Profile & Exposure",
     "sectionSlug": "profile-&-exposure",
     "text": "What is the highest level of education or training you have completed?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Context",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "No formal qualification",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Grade 9 or equivalent",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Matric / Grade 12",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Certificate or short programme",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Diploma",
+        "scoreValue": 0
+      },
+      {
+        "key": "F",
+        "label": "Degree or higher",
+        "scoreValue": 0
       }
     ]
   },
@@ -69,29 +70,34 @@
     "section": "Profile & Exposure",
     "sectionSlug": "profile-&-exposure",
     "text": "How much total work, volunteer, project or business experience do you have?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Exposure",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "None yet",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Less than 6 months",
+        "scoreValue": 5
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "6 to 12 months",
+        "scoreValue": 10
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "1 to 2 years",
+        "scoreValue": 15
+      },
+      {
+        "key": "E",
+        "label": "More than 2 years",
+        "scoreValue": 20
       }
     ]
   },
@@ -101,29 +107,74 @@
     "section": "Profile & Exposure",
     "sectionSlug": "profile-&-exposure",
     "text": "Select every role area in which you have previous work, volunteer, course, project or informal experience.",
-    "responseType": "Multiple select",
+    "responseType": "multi",
     "scoringType": "Exposure",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Administration and Operations",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Finance and Accounting",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Data and Analytics",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "IT and Technical Support",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Marketing and Communications",
+        "scoreValue": 0
+      },
+      {
+        "key": "F",
+        "label": "Sales and Customer Service",
+        "scoreValue": 0
+      },
+      {
+        "key": "G",
+        "label": "Project Coordination",
+        "scoreValue": 0
+      },
+      {
+        "key": "H",
+        "label": "Human Resources and People Support",
+        "scoreValue": 0
+      },
+      {
+        "key": "I",
+        "label": "Business Development",
+        "scoreValue": 0
+      },
+      {
+        "key": "J",
+        "label": "Entrepreneurship and Business Ownership",
+        "scoreValue": 0
+      },
+      {
+        "key": "K",
+        "label": "Leadership and Supervision",
+        "scoreValue": 0
+      },
+      {
+        "key": "L",
+        "label": "Practical and Technical Work",
+        "scoreValue": 0
+      },
+      {
+        "key": "M",
+        "label": "None of these yet",
+        "scoreValue": 0
       }
     ]
   },
@@ -133,29 +184,39 @@
     "section": "Profile & Exposure",
     "sectionSlug": "profile-&-exposure",
     "text": "What is the highest level of exposure you have in the role areas selected above?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Exposure",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "No previous exposure",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Personal or informal experience",
+        "scoreValue": 20
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Volunteer or community experience",
+        "scoreValue": 30
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Short course or structured training",
+        "scoreValue": 35
+      },
+      {
+        "key": "E",
+        "label": "Work or project experience under 1 year",
+        "scoreValue": 60
+      },
+      {
+        "key": "F",
+        "label": "Work or project experience of 1 year or more",
+        "scoreValue": 80
       }
     ]
   },
@@ -165,29 +226,54 @@
     "section": "Profile & Exposure",
     "sectionSlug": "profile-&-exposure",
     "text": "Select any activities you have previously completed, even informally.",
-    "responseType": "Multiple select",
+    "responseType": "multi",
     "scoringType": "Exposure",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Led or coordinated people or tasks",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Sold products or services, or dealt directly with customers",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Managed money, a budget, invoices or bookkeeping",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Started, ran or helped operate a business",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Repaired, installed or configured equipment or technology",
+        "scoreValue": 0
+      },
+      {
+        "key": "F",
+        "label": "Created content, marketing material or campaigns",
+        "scoreValue": 0
+      },
+      {
+        "key": "G",
+        "label": "Worked with data, spreadsheets or reports",
+        "scoreValue": 0
+      },
+      {
+        "key": "H",
+        "label": "Organised projects, events, schedules or operations",
+        "scoreValue": 0
+      },
+      {
+        "key": "I",
+        "label": "None of these yet",
+        "scoreValue": 0
       }
     ]
   },
@@ -197,7 +283,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "A supplier sells 18 notebooks at R45 each. What is the total cost?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -205,23 +291,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "R630",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "R720",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "R810",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "R900",
+        "scoreValue": 0
       }
     ]
   },
@@ -231,7 +317,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "A monthly total increases from 200 to 250. What is the percentage increase?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -239,23 +325,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "20%",
+        "scoreValue": 1
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "25%",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "40%",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "50%",
+        "scoreValue": 0
       }
     ]
   },
@@ -265,7 +351,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "What is the average of 14, 18, 22 and 26?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -273,22 +359,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "18",
+        "scoreValue": 1
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "20",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "21",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "22",
         "scoreValue": 1
       }
     ]
@@ -299,7 +385,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "A team has 40 people in a ratio of 3 trainees for every 2 mentors. How many trainees are there?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -307,23 +393,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "16",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "20",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "24",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "30",
+        "scoreValue": 0
       }
     ]
   },
@@ -333,7 +419,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "What number comes next in the sequence: 4, 7, 13, 22, 34, ___?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -341,23 +427,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "43",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "46",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "49",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "52",
+        "scoreValue": 0
       }
     ]
   },
@@ -367,7 +453,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "Applications received were: January 120, February 150 and March 135. Which month-to-month change was the largest?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -375,23 +461,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
+        "label": "January to February: increase of 30",
         "scoreValue": 4
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "February to March: decrease of 15",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "January to March: increase of 15",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "All changes were equal",
+        "scoreValue": 0
       }
     ]
   },
@@ -401,7 +487,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "A project budget is R5,000. If 38% has been spent, how much has been spent?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -409,23 +495,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "R1,500",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "R1,800",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "R1,900",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "R3,100",
+        "scoreValue": 0
       }
     ]
   },
@@ -435,7 +521,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "Six people complete a task in four hours at the same working rate. How long would eight people take?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -443,23 +529,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "2 hours",
+        "scoreValue": 1
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "3 hours",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "4 hours",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "6 hours",
+        "scoreValue": 0
       }
     ]
   },
@@ -469,7 +555,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "Which value is the smallest?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -477,23 +563,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
+        "label": "0.65",
         "scoreValue": 4
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "2/3",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "68%",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "0.70",
+        "scoreValue": 0
       }
     ]
   },
@@ -503,7 +589,7 @@
     "section": "Analytical & Numerical",
     "sectionSlug": "analytical-&-numerical",
     "text": "A data set contains 12 incorrect records out of 300 records. What is the error rate?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C01 — Analytical and Numerical Ability",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -511,23 +597,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "2%",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "4%",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "12%",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "25%",
+        "scoreValue": 0
       }
     ]
   },
@@ -537,7 +623,7 @@
     "section": "Digital & Technical",
     "sectionSlug": "digital-&-technical",
     "text": "Which password is the strongest?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C02 — Digital and Technical Ability",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -545,23 +631,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Password123",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Abdul2026",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Blue!River7-Mango#29",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "1234567890",
+        "scoreValue": 0
       }
     ]
   },
@@ -571,7 +657,7 @@
     "section": "Digital & Technical",
     "sectionSlug": "digital-&-technical",
     "text": "What is the main purpose of a filter in a spreadsheet?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C02 — Digital and Technical Ability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -579,23 +665,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "To permanently delete rows",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "To show only records that meet selected conditions",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "To change all formulas",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "To lock the spreadsheet",
+        "scoreValue": 0
       }
     ]
   },
@@ -605,7 +691,7 @@
     "section": "Digital & Technical",
     "sectionSlug": "digital-&-technical",
     "text": "You receive an unexpected email asking you to open a link and confirm your password. What should you do first?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C02 — Digital and Technical Ability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -613,22 +699,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Open the link quickly before it expires",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Reply with your password",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Verify the sender through a trusted channel and report the message if suspicious",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Forward it to colleagues to ask whether it is safe",
         "scoreValue": 1
       }
     ]
@@ -639,7 +725,7 @@
     "section": "Digital & Technical",
     "sectionSlug": "digital-&-technical",
     "text": "Which is a practical benefit of storing an approved work file in cloud storage?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C02 — Digital and Technical Ability",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -647,23 +733,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
+        "label": "It can be accessed and version-controlled by authorised users",
         "scoreValue": 4
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "It can never be deleted",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "It automatically makes all information public",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "It removes the need for passwords",
+        "scoreValue": 0
       }
     ]
   },
@@ -673,7 +759,7 @@
     "section": "Digital & Technical",
     "sectionSlug": "digital-&-technical",
     "text": "A laptop cannot connect to Wi-Fi, while other devices can. What is the best first check?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C02 — Digital and Technical Ability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -681,22 +767,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Replace the laptop immediately",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Check whether Wi-Fi or airplane mode is disabled on the laptop",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Delete all files",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Reset the office router without informing anyone",
         "scoreValue": 1
       }
     ]
@@ -707,7 +793,7 @@
     "section": "Digital & Technical",
     "sectionSlug": "digital-&-technical",
     "text": "Which spreadsheet formula correctly adds the values in cells A1 to A5?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C02 — Digital and Technical Ability",
     "secondaryCompetency": "C01 — Analytical and Numerical Ability",
@@ -715,23 +801,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "=ADD(A1-A5)",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "=SUM(A1:A5)",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "=TOTAL(A1;A5)",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "=A1:A5",
+        "scoreValue": 0
       }
     ]
   },
@@ -741,7 +827,7 @@
     "section": "Digital & Technical",
     "sectionSlug": "digital-&-technical",
     "text": "Which filename is easiest for a team to identify and manage?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C02 — Digital and Technical Ability",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -749,23 +835,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "document final latest NEW.docx",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Report.docx",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "2026-07-14_Attendance_Report_v1.0.docx",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "asdf123.docx",
+        "scoreValue": 0
       }
     ]
   },
@@ -775,7 +861,7 @@
     "section": "Digital & Technical",
     "sectionSlug": "digital-&-technical",
     "text": "A colleague asks you to send participant personal information to their private email address. What should you do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C02 — Digital and Technical Ability",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -783,22 +869,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Send it because the colleague works with you",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Check the approved data-sharing process and use only an authorised account or channel",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Post it in the team group for convenience",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Remove the participant names and send everything else without checking",
         "scoreValue": 1
       }
     ]
@@ -809,7 +895,7 @@
     "section": "Communication",
     "sectionSlug": "communication",
     "text": "Which email subject line is clearest?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -817,22 +903,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Hello",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Important",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Action required: submit attendance by 15:00 Friday",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Please read this when you can",
         "scoreValue": 1
       }
     ]
@@ -843,7 +929,7 @@
     "section": "Communication",
     "sectionSlug": "communication",
     "text": "A manager says, “Please finish the report soon,” but gives no deadline or format. What is the best response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -851,23 +937,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Assume the deadline and submit whatever you can",
+        "scoreValue": 1
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Ask for the required deadline, format and priority before proceeding",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Wait until the manager asks again",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Tell the manager the instruction is bad",
+        "scoreValue": 0
       }
     ]
   },
@@ -877,7 +963,7 @@
     "section": "Communication",
     "sectionSlug": "communication",
     "text": "Which project update is most useful to a manager?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -885,23 +971,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "We are busy with it.",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "The project is going fine, I think.",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Data collection is 80% complete; five responses are outstanding; follow-up is due by 14:00 tomorrow.",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "There have been many things happening.",
+        "scoreValue": 0
       }
     ]
   },
@@ -911,7 +997,7 @@
     "section": "Communication",
     "sectionSlug": "communication",
     "text": "A participant explains a problem but appears frustrated. What response best demonstrates active listening?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C06 — People and Teamwork",
@@ -919,22 +1005,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Interrupt and explain the policy immediately",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Say “calm down” and continue working",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Summarise what you heard, confirm the key issue and ask what outcome they need",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Refer them elsewhere without listening further",
         "scoreValue": 1
       }
     ]
@@ -945,7 +1031,7 @@
     "section": "Communication",
     "sectionSlug": "communication",
     "text": "You cannot meet a colleague’s requested deadline. What is the most professional response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -953,22 +1039,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Ignore the message until the deadline passes",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Agree even though you know it is impossible",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Explain the constraint early, propose a realistic time and agree the priority",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Tell them their request is unreasonable",
         "scoreValue": 1
       }
     ]
@@ -979,7 +1065,7 @@
     "section": "Communication",
     "sectionSlug": "communication",
     "text": "Which instruction is easiest to follow?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -987,23 +1073,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Fix the spreadsheet.",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Please sort out the data properly.",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Remove duplicate rows, standardise supplier names, then save the file as v2 by 12:00.",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Do what we discussed.",
+        "scoreValue": 0
       }
     ]
   },
@@ -1013,7 +1099,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "You have four tasks: resolve a customer access problem due today, submit a report tomorrow, complete routine filing this week and watch optional training. What should you do first?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C04 — Organisation and Attention to Detail",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -1021,23 +1107,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Watch the optional training",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Complete routine filing",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Resolve the customer access problem due today",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Start the report due tomorrow without checking the access problem",
+        "scoreValue": 2
       }
     ]
   },
@@ -1047,7 +1133,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "A spreadsheet contains duplicate customers with slightly different spellings. What is the best first step?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C05 — Problem-Solving",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -1055,23 +1141,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Delete every repeated-looking row immediately",
+        "scoreValue": 1
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Identify likely matches using agreed fields, verify them and then standardise the records",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Leave the duplicates because the spellings differ",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Sort the sheet by colour",
+        "scoreValue": 0
       }
     ]
   },
@@ -1081,7 +1167,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "A task is due today, but an essential figure is missing. What should you do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C05 — Problem-Solving",
     "secondaryCompetency": "C03 — Communication",
@@ -1089,22 +1175,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Invent a reasonable figure",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Submit without mentioning the gap",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Request the missing information immediately, explain the deadline risk and prepare the rest of the work",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Wait silently until the information arrives",
         "scoreValue": 1
       }
     ]
@@ -1115,7 +1201,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "The same type of data error appears every week. What is the strongest response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C05 — Problem-Solving",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -1123,23 +1209,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Correct each error without recording the cause",
+        "scoreValue": 1
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Identify where the error enters the process, correct the control and monitor whether it stops recurring",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Blame the person who entered the latest error",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Ignore small errors",
+        "scoreValue": 0
       }
     ]
   },
@@ -1149,7 +1235,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "A project is repeatedly delayed at the approval stage. What should be investigated first?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C05 — Problem-Solving",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -1157,23 +1243,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
+        "label": "Whether the approval owner, requirements and turnaround time are clearly defined",
         "scoreValue": 4
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Whether the project name should change",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Whether more meetings can be added",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Whether the team can skip approval without permission",
+        "scoreValue": 0
       }
     ]
   },
@@ -1183,7 +1269,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "Which sequence is most sensible when handing over a completed task?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Objective",
     "primaryCompetency": "C04 — Organisation and Attention to Detail",
     "secondaryCompetency": "C03 — Communication",
@@ -1191,23 +1277,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Send it, check it, then explain it",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Check the work, save the approved version, communicate completion and record any follow-up",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Explain it, delete drafts, then start checking",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Wait for someone to ask whether it is complete",
+        "scoreValue": 0
       }
     ]
   },
@@ -1217,7 +1303,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "A stock system shows 120 units, but a physical count shows 112. What is the best action?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C04 — Organisation and Attention to Detail",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -1225,23 +1311,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Change the system to 112 without investigation",
+        "scoreValue": 1
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Recount, check recent movements and document the verified adjustment",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Ignore the difference because it is small",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Add eight units to the physical count",
+        "scoreValue": 0
       }
     ]
   },
@@ -1251,7 +1337,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "Two managers give you urgent tasks that cannot both be completed on time. What should you do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C04 — Organisation and Attention to Detail",
     "secondaryCompetency": "C03 — Communication",
@@ -1259,23 +1345,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Choose the task you prefer",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Work on both without informing either manager",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Explain the conflict, confirm business priority and agree revised expectations",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Decline both tasks",
+        "scoreValue": 0
       }
     ]
   },
@@ -1285,7 +1371,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "You discover an important error after sending a report. What is the best response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C04 — Organisation and Attention to Detail",
     "secondaryCompetency": "C07 — Leadership and Decision-Making",
@@ -1293,23 +1379,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Hope nobody notices",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Correct the file quietly without informing recipients",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Notify affected recipients promptly, provide the corrected version and explain the impact",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Delete the original email",
+        "scoreValue": 0
       }
     ]
   },
@@ -1319,7 +1405,7 @@
     "section": "Organisation & Problem-Solving",
     "sectionSlug": "organisation-&-problem-solving",
     "text": "You receive an unfamiliar task with limited instructions. What should you do first?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C05 — Problem-Solving",
     "secondaryCompetency": "C09 — Initiative, Creativity and Adaptability",
@@ -1327,22 +1413,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Refuse because you have not done it before",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Clarify the required outcome, review available examples and plan the first steps",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Copy someone else’s work without checking",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Wait for detailed step-by-step instructions",
         "scoreValue": 1
       }
     ]
@@ -1353,7 +1439,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "A teammate misses an agreed task and this affects your deadline. What is the best first response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C06 — People and Teamwork",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -1361,22 +1447,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Complain about them in the group chat",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Complete everything yourself and say nothing",
+        "scoreValue": 1
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Speak to them directly, confirm the obstacle and agree an immediate recovery plan",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Report them before asking what happened",
         "scoreValue": 1
       }
     ]
@@ -1387,7 +1473,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "A customer is angry about a delay. What should you do first?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -1395,23 +1481,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Explain why the customer is wrong",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Listen, acknowledge the impact, confirm the facts and explain the next action",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Promise an outcome you cannot guarantee",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Transfer the customer without explanation",
+        "scoreValue": 0
       }
     ]
   },
@@ -1421,7 +1507,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "A new team member is quiet during meetings but has relevant knowledge. What is the strongest team response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C06 — People and Teamwork",
     "secondaryCompetency": "C03 — Communication",
@@ -1429,22 +1515,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Assume they have nothing to add",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Give them all difficult tasks to test them",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Invite their input, provide context and create a safe way for them to contribute",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Wait several months before involving them",
         "scoreValue": 1
       }
     ]
@@ -1455,7 +1541,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "You disagree with a colleague’s idea during a meeting. What is the best response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C06 — People and Teamwork",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -1463,23 +1549,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Dismiss the idea immediately",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Explain your concern using evidence and ask the group to compare options",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Remain silent and complain later",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Make the disagreement personal",
+        "scoreValue": 0
       }
     ]
   },
@@ -1489,7 +1575,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "One team member has much more work than the others. What should the team do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C06 — People and Teamwork",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -1497,23 +1583,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Leave it because the person is capable",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Review workload, priorities and skills, then redistribute where appropriate",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Give everyone exactly the same number of tasks without checking complexity",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Wait until the person fails",
+        "scoreValue": 0
       }
     ]
   },
@@ -1523,7 +1609,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "A colleague shares confidential employee information in a public team channel. What should you do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C08 — Conflict Management and Emotional Regulation",
     "secondaryCompetency": "C07 — Leadership and Decision-Making",
@@ -1531,23 +1617,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Forward it to another group",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Ignore it because it was not your message",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Ask for its removal, protect the information and report the incident through the approved process",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Reply with additional details",
+        "scoreValue": 0
       }
     ]
   },
@@ -1557,7 +1643,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "Your team receives praise for work that several people contributed to. How should you respond?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C06 — People and Teamwork",
     "secondaryCompetency": "C07 — Leadership and Decision-Making",
@@ -1565,22 +1651,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Accept all the credit",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Acknowledge the specific contributions of the team",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Say the praise does not matter",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Only mention the most senior person",
         "scoreValue": 1
       }
     ]
@@ -1591,7 +1677,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "Two managers give different instructions for the same task. What is the best action?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -1599,22 +1685,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Follow both instructions even if they conflict",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Choose the instruction from the manager you like more",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Show both instructions to the relevant managers and confirm one agreed direction",
+        "scoreValue": 4
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Stop all work without informing anyone",
         "scoreValue": 1
       }
     ]
@@ -1625,7 +1711,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "A participant requests a service outside your authority. What should you do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C06 — People and Teamwork",
@@ -1633,23 +1719,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Promise the service to keep them happy",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Explain your scope, identify the correct person or process and make a clear handover",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Tell them it is not your problem",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Ignore the request",
+        "scoreValue": 0
       }
     ]
   },
@@ -1659,7 +1745,7 @@
     "section": "Workplace Judgement & Teamwork",
     "sectionSlug": "workplace-judgement-&-teamwork",
     "text": "You need to give a colleague corrective feedback. What is the best approach?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -1667,22 +1753,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Give the feedback publicly so everyone learns",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Describe the specific behaviour and impact privately, listen to their view and agree the next action",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Use general statements such as “your work is always bad”",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Avoid the discussion completely",
         "scoreValue": 1
       }
     ]
@@ -1693,7 +1779,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "A team member produces good work but repeatedly submits it late. What should a supervisor do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C07 — Leadership and Decision-Making",
     "secondaryCompetency": "C04 — Organisation and Attention to Detail",
@@ -1701,23 +1787,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Ignore the lateness because the quality is good",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Discuss the pattern, identify the cause, agree a deadline-control plan and monitor it",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Remove all their responsibilities immediately",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Criticise them in front of the team",
+        "scoreValue": 0
       }
     ]
   },
@@ -1727,7 +1813,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "Two team members blame each other for a missed deadline. What should the leader do first?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C08 — Conflict Management and Emotional Regulation",
     "secondaryCompetency": "C07 — Leadership and Decision-Making",
@@ -1735,22 +1821,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Choose who seems more believable",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Hear both accounts, review the agreed responsibilities and establish the facts",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Punish both people equally without investigation",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Tell them to sort it out and leave",
         "scoreValue": 1
       }
     ]
@@ -1761,7 +1847,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "You must delegate an urgent project. What is the strongest approach?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C07 — Leadership and Decision-Making",
     "secondaryCompetency": "C03 — Communication",
@@ -1769,22 +1855,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Give the whole project to the busiest person",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Match tasks to capability, define outcomes and deadlines, confirm authority and schedule check-ins",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Delegate tasks without context so people work independently",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Do everything yourself",
         "scoreValue": 1
       }
     ]
@@ -1795,7 +1881,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "A usually reliable employee’s performance suddenly drops. What should the leader do first?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C07 — Leadership and Decision-Making",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -1803,22 +1889,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Assume they no longer care",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Hold a private evidence-based discussion, ask what changed and agree support and expectations",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Announce the problem to the team",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Immediately replace them",
         "scoreValue": 1
       }
     ]
@@ -1829,7 +1915,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "A necessary decision will be unpopular with the team. What should a leader do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C07 — Leadership and Decision-Making",
     "secondaryCompetency": "C03 — Communication",
@@ -1837,23 +1923,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Hide the reason for the decision",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Explain the evidence, impact and constraints, listen to concerns and remain accountable",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Blame senior management",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Avoid making the decision",
+        "scoreValue": 0
       }
     ]
   },
@@ -1863,7 +1949,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "A colleague strongly criticises your proposal. What is the best response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C08 — Conflict Management and Emotional Regulation",
     "secondaryCompetency": "C09 — Initiative, Creativity and Adaptability",
@@ -1871,22 +1957,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Defend every point immediately",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Ask for the evidence behind the concern, separate useful feedback from tone and revise if needed",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Stop involving the colleague",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Agree with the criticism without checking it",
         "scoreValue": 1
       }
     ]
@@ -1897,7 +1983,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "A disagreement is becoming personal and voices are rising. What should the person leading the discussion do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C08 — Conflict Management and Emotional Regulation",
     "secondaryCompetency": "C07 — Leadership and Decision-Making",
@@ -1905,22 +1991,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Allow it to continue until someone gives up",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Pause the discussion, restate the issue and rules, lower the temperature and return to facts",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Raise their voice to regain control",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "End the relationship between the team members",
         "scoreValue": 1
       }
     ]
@@ -1931,7 +2017,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "You discover a serious safety or ethical breach by a high-performing team member. What should you do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C07 — Leadership and Decision-Making",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -1939,23 +2025,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Ignore it because the person performs well",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Secure immediate safety, preserve facts and follow the formal escalation process consistently",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Warn the person informally and keep it secret",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Discuss it as gossip with the team",
+        "scoreValue": 0
       }
     ]
   },
@@ -1965,7 +2051,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "A team is demotivated after several setbacks. What is the best leadership response?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C07 — Leadership and Decision-Making",
     "secondaryCompetency": "C06 — People and Teamwork",
@@ -1973,22 +2059,22 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Tell them to work harder",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Review causes, recognise progress, reset achievable priorities and remove practical obstacles",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Pretend the setbacks did not happen",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
+        "label": "Replace the entire team",
         "scoreValue": 1
       }
     ]
@@ -1999,7 +2085,7 @@
     "section": "Leadership & Conflict",
     "sectionSlug": "leadership-&-conflict",
     "text": "A decision is required today, but some information is still unavailable. What should a leader do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Judgement",
     "primaryCompetency": "C07 — Leadership and Decision-Making",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -2007,23 +2093,23 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Delay every decision indefinitely",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Identify what is essential, assess risk, use the best available evidence and state what will be reviewed later",
+        "scoreValue": 4
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Guess without documenting assumptions",
+        "scoreValue": 1
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Ask someone else to take responsibility without context",
+        "scoreValue": 0
       }
     ]
   },
@@ -2033,7 +2119,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "Before starting multi-step work, I create a clear plan or checklist.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C04 — Organisation and Attention to Detail",
     "secondaryCompetency": "C07 — Leadership and Decision-Making",
@@ -2041,23 +2127,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2067,7 +2158,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I check important work for mistakes before submitting it.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C04 — Organisation and Attention to Detail",
     "secondaryCompetency": "C01 — Analytical and Numerical Ability",
@@ -2075,23 +2166,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2101,7 +2197,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I can change my approach when new evidence shows that the original plan is not working.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C09 — Initiative, Creativity and Adaptability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -2109,23 +2205,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2135,7 +2236,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "When requirements are unclear, I ask focused questions before proceeding.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C03 — Communication",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -2143,23 +2244,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2169,7 +2275,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I continue using my first idea even when evidence shows it is not working.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C09 — Initiative, Creativity and Adaptability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -2177,23 +2283,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2203,7 +2314,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I take ownership of agreed tasks without needing repeated reminders.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C09 — Initiative, Creativity and Adaptability",
     "secondaryCompetency": "C07 — Leadership and Decision-Making",
@@ -2211,23 +2322,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2237,7 +2353,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I remain calm and useful when plans change unexpectedly.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C08 — Conflict Management and Emotional Regulation",
     "secondaryCompetency": "C09 — Initiative, Creativity and Adaptability",
@@ -2245,23 +2361,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2271,7 +2392,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I seek useful feedback and apply it to improve my work.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C09 — Initiative, Creativity and Adaptability",
     "secondaryCompetency": "C03 — Communication",
@@ -2279,23 +2400,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2305,7 +2431,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I avoid difficult conversations even when the issue is affecting the team.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C08 — Conflict Management and Emotional Regulation",
     "secondaryCompetency": "C03 — Communication",
@@ -2313,23 +2439,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2339,7 +2470,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I enjoy identifying a better way to complete a repeated process.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C09 — Initiative, Creativity and Adaptability",
     "secondaryCompetency": "C05 — Problem-Solving",
@@ -2347,23 +2478,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2373,7 +2509,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "I keep records, commitments and deadlines up to date.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C04 — Organisation and Attention to Detail",
     "secondaryCompetency": "C07 — Leadership and Decision-Making",
@@ -2381,23 +2517,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2407,7 +2548,7 @@
     "section": "Work Style & Adaptability",
     "sectionSlug": "work-style-&-adaptability",
     "text": "When I make a mistake, I acknowledge it and take corrective action.",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Self-report",
     "primaryCompetency": "C07 — Leadership and Decision-Making",
     "secondaryCompetency": "C08 — Conflict Management and Emotional Regulation",
@@ -2415,23 +2556,28 @@
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Almost never",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Rarely",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Sometimes",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Often",
+        "scoreValue": 0
+      },
+      {
+        "key": "E",
+        "label": "Almost always",
+        "scoreValue": 0
       }
     ]
   },
@@ -2441,29 +2587,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which activity would you most prefer to do?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Organise records, schedules and routine office processes",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Check invoices, budgets and transaction records",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Analyse spreadsheet information for patterns",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Resolve a computer or system problem",
+        "scoreValue": 0
       }
     ]
   },
@@ -2473,29 +2619,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which activity sounds most appealing?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Create a campaign or communication message",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Help a customer choose or resolve a service issue",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Coordinate project tasks and deadlines",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Support recruitment, onboarding or training",
+        "scoreValue": 0
       }
     ]
   },
@@ -2505,29 +2651,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which responsibility would you prefer?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Research and approach a potential partner",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Test whether a business idea can earn sustainable income",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Guide a team and hold people accountable",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Install, maintain or repair equipment",
+        "scoreValue": 0
       }
     ]
   },
@@ -2537,29 +2683,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which task would you choose first?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Improve an office filing or scheduling process",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Write and publish a social media update",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Prepare a proposal for a new client or partner",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Decide how to price and sell a new service",
+        "scoreValue": 0
       }
     ]
   },
@@ -2569,29 +2715,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which work would you find most satisfying?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Reconcile transactions and find a financial difference",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Follow up leads and help close a sale",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Help resolve a people or workplace issue",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Allocate work and coach a team toward a target",
+        "scoreValue": 0
       }
     ]
   },
@@ -2601,29 +2747,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which activity would you most enjoy learning?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Clean data and build a performance report",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Configure a device or user account",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Track project milestones and risks",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Use tools to complete a technical installation",
+        "scoreValue": 0
       }
     ]
   },
@@ -2633,29 +2779,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which daily responsibility would suit you best?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Maintain accurate documents and schedules",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Resolve customer complaints and queries",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Organise an event or multi-step project",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Supervise a shift or small team",
+        "scoreValue": 0
       }
     ]
   },
@@ -2665,29 +2811,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which result would you most like to produce?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "A clear and accurate budget",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "A report that explains what the data shows",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "A smooth employee onboarding process",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "A paying customer for a new business idea",
+        "scoreValue": 0
       }
     ]
   },
@@ -2697,29 +2843,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which problem would you prefer to solve?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "A user cannot access a system or network",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "An audience is not engaging with a message",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "The organisation needs new markets or partnerships",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "A physical device or installation is not working",
+        "scoreValue": 0
       }
     ]
   },
@@ -2729,29 +2875,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which task sounds most natural to you?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Create a checklist and organise records",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Compare performance information and identify trends",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Develop a content calendar",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Plan staff development or support",
+        "scoreValue": 0
       }
     ]
   },
@@ -2761,29 +2907,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which activity would you most prefer?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "Check costs and payment records",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "Support users with technology",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "Negotiate a sale or service solution",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "Write a partnership or client pitch",
+        "scoreValue": 0
       }
     ]
   },
@@ -2793,29 +2939,29 @@
     "section": "Career Interests",
     "sectionSlug": "career-interests",
     "text": "Which outcome would motivate you most?",
-    "responseType": "Single select",
+    "responseType": "single",
     "scoringType": "Interest",
     "required": true,
     "options": [
       {
         "key": "A",
-        "label": "Option A",
-        "scoreValue": 4
+        "label": "A team meets coordinated deadlines",
+        "scoreValue": 0
       },
       {
         "key": "B",
-        "label": "Option B",
-        "scoreValue": 3
+        "label": "A business model becomes financially viable",
+        "scoreValue": 0
       },
       {
         "key": "C",
-        "label": "Option C",
-        "scoreValue": 2
+        "label": "A team member improves through coaching",
+        "scoreValue": 0
       },
       {
         "key": "D",
-        "label": "Option D",
-        "scoreValue": 1
+        "label": "A practical installation works correctly and safely",
+        "scoreValue": 0
       }
     ]
   }
