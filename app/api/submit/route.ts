@@ -7,8 +7,10 @@ import {
   SUBMISSION_RESULTS_FIELDS,
   SUBMISSIONS_FIELDS,
 } from "@/lib/airtable/tables";
+import { getCatalog } from "@/lib/catalog";
 import { scoreSubmission } from "@/lib/scoring/engine";
 import type { SubmitPayload } from "@/lib/types/catalog";
+import { getUnansweredRequiredQuestions } from "@/lib/validation/answers";
 
 const submitSchema = z.object({
   participant: z.object({
@@ -115,6 +117,21 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const payload = submitSchema.parse(body) as SubmitPayload;
+
+    const answerMap = Object.fromEntries(
+      payload.answers.map((a) => [a.questionId, a.selectedOptions]),
+    );
+    const unanswered = getUnansweredRequiredQuestions(
+      getCatalog().questions,
+      answerMap,
+    );
+    if (unanswered.length > 0) {
+      return Response.json(
+        { error: "All required questions must be answered before submitting." },
+        { status: 400 },
+      );
+    }
+
     const scoring = scoreSubmission(payload.answers);
 
     if (isAirtableConfigured()) {

@@ -1,13 +1,14 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ParticipantShell } from "@/components/features/assessment/participant-shell";
 import { Button } from "@/components/ui/button";
 import { OptionChoice } from "@/components/ui/option-choice";
 import { Progress } from "@/components/ui/progress";
 import { getCatalog } from "@/lib/catalog";
 import { loadSession, saveSession } from "@/lib/session";
+import { getUnansweredRequiredQuestions } from "@/lib/validation/answers";
 
 export default function TestSectionPage() {
   const params = useParams<{ sectionSlug: string }>();
@@ -18,26 +19,37 @@ export default function TestSectionPage() {
   const section = catalog.sections[sectionIndex];
   const questions = catalog.questions.filter((q) => q.sectionSlug === sectionSlug);
 
-  const [answers, setAnswers] = useState<Record<string, string[]>>({});
+  const [answers, setAnswers] = useState<Record<string, string[]>>(() => {
+    return loadSession()?.answers ?? {};
+  });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
+  const unansweredQuestions = useMemo(
+    () => getUnansweredRequiredQuestions(questions, answers),
+    [questions, answers],
+  );
+  const canProceed = unansweredQuestions.length === 0;
+
   useEffect(() => {
-    const session = loadSession();
-    if (!session) {
+    if (!loadSession()) {
       router.replace("/register");
-      return;
     }
-    setAnswers(session.answers);
   }, [router]);
 
   function setAnswer(questionId: string, value: string) {
     setAnswers((prev) => ({ ...prev, [questionId]: [value] }));
+    setError("");
   }
 
   async function handleNext() {
     const session = loadSession();
     if (!session || !section) return;
+
+    if (!canProceed) {
+      setError("Please answer all questions in this section before continuing.");
+      return;
+    }
 
     const merged = { ...session.answers, ...answers };
     const updated = { ...session, answers: merged, currentSectionIndex: sectionIndex };
@@ -45,7 +57,17 @@ export default function TestSectionPage() {
 
     const isLast = sectionIndex >= catalog.sections.length - 1;
     if (!isLast) {
+      setError("");
       router.push(`/test/${catalog.sections[sectionIndex + 1].slug}`);
+      return;
+    }
+
+    const allUnanswered = getUnansweredRequiredQuestions(
+      catalog.questions,
+      merged,
+    );
+    if (allUnanswered.length > 0) {
+      setError("Please answer all questions before submitting.");
       return;
     }
 
@@ -107,8 +129,16 @@ export default function TestSectionPage() {
         </h1>
 
         <div className="mt-8 space-y-10">
-          {questions.map((question) => (
-            <fieldset key={question.questionId} className="space-y-3">
+          {questions.map((question) => {
+            const isUnanswered = unansweredQuestions.some(
+              (q) => q.questionId === question.questionId,
+            );
+
+            return (
+            <fieldset
+              key={question.questionId}
+              className={`space-y-3 rounded-xl ${isUnanswered && error ? "ring-2 ring-red-500/60 ring-offset-2" : ""}`}
+            >
               <legend className="mb-3 block text-base font-medium text-p5-ink leading-snug">
                 {question.text}
                 {question.required && (
@@ -131,12 +161,21 @@ export default function TestSectionPage() {
                 ))}
               </div>
             </fieldset>
-          ))}
+            );
+          })}
         </div>
 
         {error && (
           <p className="mt-6 text-sm text-red-600" role="alert">
             {error}
+          </p>
+        )}
+
+        {!canProceed && !error && (
+          <p className="mt-6 text-sm text-p5-muted">
+            {unansweredQuestions.length === 1
+              ? "1 question still needs an answer."
+              : `${unansweredQuestions.length} questions still need answers.`}
           </p>
         )}
 
@@ -153,7 +192,7 @@ export default function TestSectionPage() {
           ) : (
             <span />
           )}
-          <Button onClick={handleNext} disabled={submitting}>
+          <Button onClick={handleNext} disabled={submitting || !canProceed}>
             {submitting
               ? "Submitting..."
               : sectionIndex >= catalog.sections.length - 1
