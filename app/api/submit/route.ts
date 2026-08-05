@@ -8,6 +8,7 @@ import {
   SUBMISSIONS_FIELDS,
 } from "@/lib/airtable/tables";
 import { getCatalog } from "@/lib/catalog";
+import { CONSENT_QUESTION_ID, isConsentGiven } from "@/lib/scoring/consent";
 import { scoreSubmission } from "@/lib/scoring/engine";
 import type { SubmitPayload } from "@/lib/types/catalog";
 import { getUnansweredRequiredQuestions } from "@/lib/validation/answers";
@@ -46,8 +47,10 @@ async function persistToAirtable(payload: SubmitPayload, scoring: ReturnType<typ
   const now = new Date().toISOString();
   const nowDate = toAirtableDate(now);
   const startedDate = toAirtableDate(payload.startedAt);
-  const consentAnswer = payload.answers.find((a) => a.questionId === "P001")?.selectedOptions[0];
-  const consentGiven = consentAnswer === "yes";
+  const consentAnswer = payload.answers.find(
+    (a) => a.questionId === CONSENT_QUESTION_ID,
+  )?.selectedOptions;
+  const consentGiven = isConsentGiven(consentAnswer);
 
   const existingParticipants = await findRecordsByFormula<Record<string, string>>(
     AIRTABLE_TABLES.PARTICIPANTS,

@@ -4,6 +4,7 @@ import type {
   ScoringResult,
   TopRoleRecommendation,
 } from "@/lib/types/catalog";
+import { CONSENT_QUESTION_ID, isConsentGiven } from "./consent";
 import {
   getExposureBonus,
   getInterestMappings,
@@ -11,12 +12,33 @@ import {
   SECONDARY_COMPETENCY_WEIGHT,
 } from "./exposure-maps";
 
+/** Workbook imports use "C01 — Name"; weights and competencies use "C01". */
+export function resolveCompetencyCode(
+  ref: string | undefined,
+  catalog: ReturnType<typeof getCatalog>,
+): string | undefined {
+  if (!ref) return undefined;
+
+  const trimmed = ref.trim();
+  const byCode = catalog.competencies.find((c) => c.code === trimmed);
+  if (byCode) return byCode.code;
+
+  const prefix = trimmed.match(/^(C\d+)/)?.[1];
+  if (prefix && catalog.competencies.some((c) => c.code === prefix)) {
+    return prefix;
+  }
+
+  const byName = catalog.competencies.find(
+    (c) => trimmed === c.name || trimmed.endsWith(c.name),
+  );
+  return byName?.code;
+}
+
 export function scoreSubmission(answers: AnswerPayload[]): ScoringResult {
   const catalog = getCatalog();
   const answerMap = new Map(answers.map((a) => [a.questionId, a.selectedOptions]));
 
-  const consentAnswer = answerMap.get("P001")?.[0];
-  if (consentAnswer !== "yes") {
+  if (!isConsentGiven(answerMap.get(CONSENT_QUESTION_ID), catalog)) {
     return {
       status: "rejected",
       competencyScores: {},
@@ -42,31 +64,40 @@ export function scoreSubmission(answers: AnswerPayload[]): ScoringResult {
       question.scoringType === "Objective" ||
       question.scoringType === "Judgement"
     ) {
-      for (const option of question.options) {
-        if (question.primaryCompetency) {
-          competencyMax[question.primaryCompetency] = Math.max(
-            competencyMax[question.primaryCompetency] ?? 0,
-            option.scoreValue,
-          );
-        }
-        if (question.secondaryCompetency) {
-          competencyMax[question.secondaryCompetency] = Math.max(
-            competencyMax[question.secondaryCompetency] ?? 0,
-            option.scoreValue * SECONDARY_COMPETENCY_WEIGHT,
-          );
-        }
+      const primaryCode = resolveCompetencyCode(
+        question.primaryCompetency,
+        catalog,
+      );
+      const secondaryCode = resolveCompetencyCode(
+        question.secondaryCompetency,
+        catalog,
+      );
+
+      // maxPossible is the sum of each question's best option (not a single global max).
+      const questionPrimaryMax = Math.max(
+        0,
+        ...question.options.map((o) => o.scoreValue),
+      );
+      if (primaryCode) {
+        competencyMax[primaryCode] =
+          (competencyMax[primaryCode] ?? 0) + questionPrimaryMax;
+      }
+      if (secondaryCode) {
+        competencyMax[secondaryCode] =
+          (competencyMax[secondaryCode] ?? 0) +
+          questionPrimaryMax * SECONDARY_COMPETENCY_WEIGHT;
       }
 
       for (const key of selected) {
         const option = question.options.find((o) => o.key === key);
         if (!option) continue;
-        if (question.primaryCompetency) {
-          competencyRaw[question.primaryCompetency] =
-            (competencyRaw[question.primaryCompetency] ?? 0) + option.scoreValue;
+        if (primaryCode) {
+          competencyRaw[primaryCode] =
+            (competencyRaw[primaryCode] ?? 0) + option.scoreValue;
         }
-        if (question.secondaryCompetency) {
-          competencyRaw[question.secondaryCompetency] =
-            (competencyRaw[question.secondaryCompetency] ?? 0) +
+        if (secondaryCode) {
+          competencyRaw[secondaryCode] =
+            (competencyRaw[secondaryCode] ?? 0) +
             option.scoreValue * SECONDARY_COMPETENCY_WEIGHT;
         }
       }

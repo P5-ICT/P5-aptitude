@@ -7,6 +7,11 @@ import { Button } from "@/components/ui/button";
 import { OptionChoice } from "@/components/ui/option-choice";
 import { Progress } from "@/components/ui/progress";
 import { getCatalog } from "@/lib/catalog";
+import {
+  CONSENT_QUESTION_ID,
+  hasRefusedConsent,
+  isConsentGiven,
+} from "@/lib/scoring/consent";
 import { loadSession, saveSession } from "@/lib/session";
 import { getUnansweredRequiredQuestions } from "@/lib/validation/answers";
 
@@ -18,6 +23,7 @@ export default function TestSectionPage() {
   const sectionIndex = catalog.sections.findIndex((s) => s.slug === sectionSlug);
   const section = catalog.sections[sectionIndex];
   const questions = catalog.questions.filter((q) => q.sectionSlug === sectionSlug);
+  const firstSectionSlug = catalog.sections[0]?.slug;
 
   const [answers, setAnswers] = useState<Record<string, string[]>>(() => {
     return loadSession()?.answers ?? {};
@@ -29,16 +35,38 @@ export default function TestSectionPage() {
     () => getUnansweredRequiredQuestions(questions, answers),
     [questions, answers],
   );
-  const canProceed = unansweredQuestions.length === 0;
+  const consentSelection =
+    answers[CONSENT_QUESTION_ID] ?? loadSession()?.answers[CONSENT_QUESTION_ID];
+  const consentRefused = hasRefusedConsent(consentSelection, catalog);
+  const consentOk = isConsentGiven(consentSelection, catalog);
+  const canProceed = unansweredQuestions.length === 0 && !consentRefused;
 
   useEffect(() => {
-    if (!loadSession()) {
+    const session = loadSession();
+    if (!session) {
       router.replace("/register");
+      return;
     }
-  }, [router]);
+
+    // Without affirmative consent, keep the participant on the first section.
+    if (
+      firstSectionSlug &&
+      sectionSlug !== firstSectionSlug &&
+      !isConsentGiven(session.answers[CONSENT_QUESTION_ID], catalog)
+    ) {
+      router.replace(`/test/${firstSectionSlug}`);
+    }
+  }, [router, catalog, firstSectionSlug, sectionSlug]);
 
   function setAnswer(questionId: string, value: string) {
-    setAnswers((prev) => ({ ...prev, [questionId]: [value] }));
+    setAnswers((prev) => {
+      const next = { ...prev, [questionId]: [value] };
+      const session = loadSession();
+      if (session) {
+        saveSession({ ...session, answers: { ...session.answers, ...next } });
+      }
+      return next;
+    });
     setError("");
   }
 
@@ -46,8 +74,28 @@ export default function TestSectionPage() {
     const session = loadSession();
     if (!session || !section) return;
 
+    const mergedConsent =
+      answers[CONSENT_QUESTION_ID] ?? session.answers[CONSENT_QUESTION_ID];
+
+    if (hasRefusedConsent(mergedConsent, catalog)) {
+      setError(
+        "You must consent to continue. Without consent, the assessment cannot proceed.",
+      );
+      return;
+    }
+
     if (!canProceed) {
       setError("Please answer all questions in this section before continuing.");
+      return;
+    }
+
+    if (!isConsentGiven(mergedConsent, catalog)) {
+      setError(
+        "You must consent to continue. Without consent, the assessment cannot proceed.",
+      );
+      if (firstSectionSlug) {
+        router.push(`/test/${firstSectionSlug}`);
+      }
       return;
     }
 
@@ -133,34 +181,41 @@ export default function TestSectionPage() {
             const isUnanswered = unansweredQuestions.some(
               (q) => q.questionId === question.questionId,
             );
+            const isConsentQuestion = question.questionId === CONSENT_QUESTION_ID;
 
             return (
-            <fieldset
-              key={question.questionId}
-              className={`space-y-3 rounded-xl ${isUnanswered && error ? "ring-2 ring-red-500/60 ring-offset-2" : ""}`}
-            >
-              <legend className="mb-3 block text-base font-medium text-p5-ink leading-snug">
-                {question.text}
-                {question.required && (
-                  <span className="text-red-600" aria-hidden="true">
-                    {" "}
-                    *
-                  </span>
+              <fieldset
+                key={question.questionId}
+                className={`space-y-3 rounded-xl ${isUnanswered && error ? "ring-2 ring-red-500/60 ring-offset-2" : ""} ${isConsentQuestion && consentRefused ? "ring-2 ring-red-500/60 ring-offset-2" : ""}`}
+              >
+                <legend className="mb-3 block text-base font-medium text-p5-ink leading-snug">
+                  {question.text}
+                  {question.required && (
+                    <span className="text-red-600" aria-hidden="true">
+                      {" "}
+                      *
+                    </span>
+                  )}
+                </legend>
+                <div className="space-y-2">
+                  {question.options.map((option) => (
+                    <OptionChoice
+                      key={option.key}
+                      name={question.questionId}
+                      value={option.key}
+                      label={option.label}
+                      checked={answers[question.questionId]?.[0] === option.key}
+                      onChange={(value) => setAnswer(question.questionId, value)}
+                    />
+                  ))}
+                </div>
+                {isConsentQuestion && consentRefused && (
+                  <p className="mt-3 text-sm text-red-600" role="alert">
+                    Without consent you cannot continue this assessment. Select
+                    &ldquo;Yes, I consent&rdquo; to proceed, or leave the assessment.
+                  </p>
                 )}
-              </legend>
-              <div className="space-y-2">
-                {question.options.map((option) => (
-                  <OptionChoice
-                    key={option.key}
-                    name={question.questionId}
-                    value={option.key}
-                    label={option.label}
-                    checked={answers[question.questionId]?.[0] === option.key}
-                    onChange={(value) => setAnswer(question.questionId, value)}
-                  />
-                ))}
-              </div>
-            </fieldset>
+              </fieldset>
             );
           })}
         </div>
@@ -171,7 +226,7 @@ export default function TestSectionPage() {
           </p>
         )}
 
-        {!canProceed && !error && (
+        {!canProceed && !error && !consentRefused && (
           <p className="mt-6 text-sm text-p5-muted">
             {unansweredQuestions.length === 1
               ? "1 question still needs an answer."
@@ -192,7 +247,10 @@ export default function TestSectionPage() {
           ) : (
             <span />
           )}
-          <Button onClick={handleNext} disabled={submitting || !canProceed}>
+          <Button
+            onClick={handleNext}
+            disabled={submitting || !canProceed || !consentOk}
+          >
             {submitting
               ? "Submitting..."
               : sectionIndex >= catalog.sections.length - 1
